@@ -1,0 +1,7 @@
+dev/*
+node_modules/*
+languages/*
+gulpfile.js
+package.json
+package-lock.json
+*.LICENSE.txt

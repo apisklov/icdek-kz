@@ -1,0 +1,23 @@
+{
+    "key": "ui_options_page_678a691b7c46d",
+    "title": "Настройки шаблона",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Настройки шаблона",
+    "menu_slug": "cdek-theme",
+    "parent_slug": "options-general.php",
+    "advanced_configuration": 0,
+    "icon_url": "",
+    "menu_title": "",
+    "position": "",
+    "redirect": false,
+    "description": "",
+    "menu_icon": [],
+    "update_button": "Обновить",
+    "updated_message": "Настройки были обновлены",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1737124152
+}

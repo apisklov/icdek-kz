@@ -1,0 +1,22 @@
+.b-form{
+    margin-top: 20px;
+}
+
+.b-form__field{
+    margin-bottom: 10px;
+}
+
+.b-form__spinner{
+    height: 30px;
+    width: 30px;
+    margin-top: 16px;
+    display: none;
+}
+
+.b-form__notice{
+    margin-top: 16px;
+}
+
+.b-form__info{
+    margin-bottom: 12px;
+}

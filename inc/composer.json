@@ -1,0 +1,17 @@
+{
+    "name": "wpevo/icdek",
+    "autoload": {
+        "psr-4": {
+            "Wpevo\\Icdek\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "apisklov",
+            "email": "apisklov@bk.ru"
+        }
+    ],
+    "require": {
+        "endroid/qr-code": "^4.6"
+    }
+}
