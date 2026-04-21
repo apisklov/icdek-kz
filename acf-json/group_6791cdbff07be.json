@@ -240,7 +240,9 @@
                                 "wb": "WB",
                                 "ozon": "Ozon",
                                 "yandex": "Яндекс Маркет",
-                                "megamarket": "Мегамаркет"
+                                "megamarket": "Мегамаркет",
+                                "kaspi": "Kaspi",
+                                "flip": "Flip"
                             },
                             "default_value": [],
                             "return_format": "label",
@@ -249,8 +251,8 @@
                             "allow_in_bindings": 0,
                             "ui": 1,
                             "ajax": 0,
-                            "placeholder": "",
                             "create_options": 0,
+                            "placeholder": "",
                             "save_options": 0,
                             "parent_repeater": "field_67b6d312b077d"
                         }
@@ -277,5 +279,8 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753072780
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1776676325
 }

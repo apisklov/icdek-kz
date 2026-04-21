@@ -13,199 +13,199 @@
                         <div class="dogovor__steps">
                             <div class="dogovor__step">
                                 <div class="dogovor__step-figure">1</div>
-                                <div class="dogovor__step-text">Заполните<br> и отправьте анкету</div>
+                                <div class="dogovor__step-text"><?php echo __('Заполните<br> и отправьте анкету', 'icdek') ?></div>
                             </div>
                             <div class="dogovor__step">
                                 <div class="dogovor__step-figure">2</div>
-                                <div class="dogovor__step-text">Дождитесь обратного звонока менеджера</div>
+                                <div class="dogovor__step-text"><?php echo __( 'Дождитесь обратного звонока менеджера', 'icdek' ) ?></div>
                             </div>
                             <div class="dogovor__step">
                                 <div class="dogovor__step-figure">3</div>
-                                <div class="dogovor__step-text">Обсудите условия и подпишите договор</div>
+                                <div class="dogovor__step-text"><?php echo __( 'Обсудите условия и подпишите договор', 'icdek' ) ?></div>
                             </div>
                         </div>
                         <div class="dogovor__app" id="dogovor-app">
                             <form class="dogovor__form" ref="form" @submit.prevent>
                                 <div class="dogovor__side">
                                     <div class="dogovor__sticky">
-                                        <div class="dogovor__subtitle">Лицо</div>
+                                        <div class="dogovor__subtitle"><?php echo __( 'Лицо', 'icdek' ) ?></div>
                                         <label class="field field--checkbox">
                                             <input type="radio" name="person" value="Юридическое лицо" v-model="type">
                                             <span class="field__checkbox"></span>
-                                            <span class="field__label">Юридическое лицо</span>
+                                            <span class="field__label"><?php echo __( 'Юридическое лицо', 'icdek' ) ?></span>
                                         </label>
                                         <label class="field field--checkbox">
                                             <input type="radio" name="person" value="Индивидуальный предприниматель" v-model="type">
                                             <span class="field__checkbox"></span>
-                                            <span class="field__label">Индивидуальный предприниматель</span>
+                                            <span class="field__label"><?php echo __( 'Индивидуальный предприниматель', 'icdek' ) ?></span>
                                         </label>
                                         <label class="field field--checkbox">
                                             <input type="radio" name="person" value="Самозанятый гражданин" v-model="type">
                                             <span class="field__checkbox"></span>
-                                            <span class="field__label">Самозанятый гражданин</span>
+                                            <span class="field__label"><?php echo __( 'Самозанятый гражданин', 'icdek' ) ?></span>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="dogovor__content">
                                     <div class="dogovor__section" v-if="isSelf">
-                                        <div class="dogovor__subtitle">ИНН</div>
+                                        <div class="dogovor__subtitle"><?php echo __( 'ИНН', 'icdek' ) ?></div>
                                         <div class="dogovor__row">
                                             <div class="field">
-                                                <div class="field__label">ИНН</div>
-                                                <input type="text" name="inn" class="field__input" placeholder="Введите номер" data-required>
+                                                <div class="field__label"><?php echo __( 'ИНН', 'icdek' ) ?></div>
+                                                <input type="text" name="inn" class="field__input" placeholder="<?php echo __( 'Введите номер', 'icdek' ) ?>" data-required>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="dogovor__section" v-if="isSelf">
-                                        <div class="dogovor__subtitle">Данные</div>
+                                        <div class="dogovor__subtitle"><?php echo __( 'Данные', 'icdek' ) ?></div>
                                         <div class="dogovor__row">
                                             <div class="field">
-                                                <div class="field__label">ФИО</div>
+                                                <div class="field__label"><?php echo __( 'ФИО', 'icdek' ) ?></div>
                                                 <input type="text" name="name" class="field__input" data-required>
                                             </div>
                                             <div class="field">
-                                                <div class="field__label">Дата рождения</div>
+                                                <div class="field__label"><?php echo __( 'Дата рождения', 'icdek' ) ?></div>
                                                 <input type="text" class="field__input" name="date_birth" data-required>
                                             </div>
                                         </div>
                                         <div class="dogovor__row">
                                             <div class="field">
-                                                <div class="field__label">Телефон</div>
-                                                <input type="text" class="field__input" placeholder="Введите номер" name="phone" data-required>
+                                                <div class="field__label"><?php echo __( 'Телефон', 'icdek' ) ?></div>
+                                                <input type="text" class="field__input" placeholder="<?php echo __( 'Введите номер', 'icdek' ) ?>" name="phone" data-required>
                                             </div>
                                             <div class="field">
-                                                <div class="field__label">E-mail</div>
-                                                <input type="text" class="field__input" placeholder="Укажите e-mail" name="email" data-required>
+                                                <div class="field__label"><?php echo __( 'E-mail', 'icdek' ) ?></div>
+                                                <input type="text" class="field__input" placeholder="<?php echo __( 'Укажите e-mail', 'icdek' ) ?>" name="email" data-required>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="dogovor__section">
-                                        <div class="dogovor__subtitle" v-if="isSelf">Паспорт</div>
-                                        <div class="dogovor__subtitle" v-else>Данные</div>
+                                        <div class="dogovor__subtitle" v-if="isSelf"><?php echo __( 'Паспорт', 'icdek' ) ?></div>
+                                        <div class="dogovor__subtitle" v-else><?php echo __( 'Данные', 'icdek' ) ?></div>
                                         <div class="dogovor__row" v-if="!isSelf">
                                             <div class="field" v-if="!isSelf">
-                                                <div class="field__label" v-if="isLegal">Наименование</div>
-                                                <div class="field__label" v-else>ФИО (индивидуального предпринимателя)</div>
-                                                <input type="text" name="name" class="field__input" placeholder="Введите название" data-required>
+                                                <div class="field__label" v-if="isLegal"><?php echo __( 'Данные', 'icdek' ) ?></div>
+                                                <div class="field__label" v-else><?php echo __( 'ФИО (индивидуального предпринимателя)', 'icdek' ) ?></div>
+                                                <input type="text" name="name" class="field__input" placeholder="<?php echo __( 'Введите название', 'icdek' ) ?>" data-required>
                                             </div>
                                             <div class="field">
-                                                <div class="field__label">ИНН</div>
-                                                <input type="text" name="inn" class="field__input" placeholder="Введите номер" data-required>
+                                                <div class="field__label"><?php echo __( 'ИНН', 'icdek' ) ?></div>
+                                                <input type="text" name="inn" class="field__input" placeholder="<?php echo __( 'Введите номер', 'icdek' ) ?>" data-required>
                                             </div>
                                         </div>
                                         <div class="dogovor__row" v-if="!isSelf">
                                             <div class="field">
-                                                <div class="field__label">Юридический адрес</div>
-                                                <input type="text" name="address_legal" class="field__input" placeholder="Введите адрес" data-required>
+                                                <div class="field__label"><?php echo __( 'Юридический адрес', 'icdek' ) ?></div>
+                                                <input type="text" name="address_legal" class="field__input" placeholder="<?php echo __( 'Введите адрес', 'icdek' ) ?>" data-required>
                                             </div>
                                             <div class="field" v-if="otherAddress == 'Да'">
-                                                <div class="field__label">Фактический адрес</div>
-                                                <input type="text" name="address_fact" class="field__input" placeholder="Город, улица, дом/офис" data-required>
+                                                <div class="field__label"><?php echo __( 'Фактический адрес', 'icdek' ) ?></div>
+                                                <input type="text" name="address_fact" class="field__input" placeholder="<?php echo __( 'Город, улица, дом/офис', 'icdek' ) ?>" data-required>
                                             </div>
                                         </div>
                                         <div class="dogovor__row" v-if="!isSelf">
                                             <div class="field">
-                                                <div class="field__label">Фактический адрес отличается?</div>
+                                                <div class="field__label"><?php echo __( 'Фактический адрес отличается', 'icdek' ) ?>?</div>
 
                                                 <div class="field__radios">
                                                     <label class="field field--checkbox">
                                                         <input type="radio" name="otherAddress" value="Да" v-model="otherAddress">
                                                         <span class="field__checkbox"></span>
-                                                        <span class="field__label">Отличается</span>
+                                                        <span class="field__label"><?php echo __( 'Отличается', 'icdek' ) ?></span>
                                                     </label>
                                                     <label class="field field--checkbox">
                                                         <input type="radio" name="otherAddress" value="Нет" v-model="otherAddress">
                                                         <span class="field__checkbox"></span>
-                                                        <span class="field__label">Не отличается</span>
+                                                        <span class="field__label"><?php echo __( 'Не отличается', 'icdek' ) ?></span>
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="dogovor__row" v-if="isLegal">
                                             <div class="field">
-                                                <div class="field__label">Номер свидетельства (необязательно)</div>
-                                                <input type="text" class="field__input" placeholder="Введите номер" name="number_license">
+                                                <div class="field__label"><?php echo __( 'Номер свидетельства', 'icdek' ) ?> (<?php echo __( 'не обязательно', 'icdek' ) ?>)</div>
+                                                <input type="text" class="field__input" placeholder="<?php echo __( 'Введите номер', 'icdek' ) ?>" name="number_license">
                                             </div>
                                             <div class="field">
-                                                <div class="field__label">Дата выдачи свидельства (необязательно)</div>
-                                                <input type="text" class="field__input" placeholder="Выберите дату" name="date_license">
-                                            </div>
-                                        </div>
-                                        <div class="dogovor__row" v-if="!isSelf">
-                                            <div class="field">
-                                                <div class="field__label">БИК банка</div>
-                                                <input type="text" class="field__input" placeholder="Введите БИК" data-required name="bik">
-                                            </div>
-                                            <div class="field">
-                                                <div class="field__label">Расчетный счет</div>
-                                                <input type="text" class="field__input" placeholder="Введите номер" data-required name="payment">
+                                                <div class="field__label"><?php echo __( 'Дата выдачи свидельства', 'icdek' ) ?> (<?php echo __( 'не обязательно', 'icdek' ) ?>)</div>
+                                                <input type="text" class="field__input" placeholder="<?php echo __( 'Выберите дату', 'icdek' ) ?>" name="date_license">
                                             </div>
                                         </div>
                                         <div class="dogovor__row" v-if="!isSelf">
                                             <div class="field">
-                                                <div class="field__label">ФИО заполнителя анкеты</div>
+                                                <div class="field__label"><?php echo __( 'БИК банка', 'icdek' ) ?></div>
+                                                <input type="text" class="field__input" placeholder="<?php echo __( 'Введите БИК', 'icdek' ) ?>" data-required name="bik">
+                                            </div>
+                                            <div class="field">
+                                                <div class="field__label"><?php echo __( 'Расчетный счет', 'icdek' ) ?></div>
+                                                <input type="text" class="field__input" placeholder="<?php echo __( 'Введите номер', 'icdek' ) ?>" data-required name="payment">
+                                            </div>
+                                        </div>
+                                        <div class="dogovor__row" v-if="!isSelf">
+                                            <div class="field">
+                                                <div class="field__label"><?php echo __( 'ФИО заполнителя анкеты', 'icdek' ) ?></div>
                                                 <input type="text" class="field__input" name="fio_anketa">
                                             </div>
                                             <div class="field" v-if="isLegal">
-                                                <div class="field__label">ФИО директора</div>
+                                                <div class="field__label"><?php echo __( 'ФИО директора', 'icdek' ) ?></div>
                                                 <input type="text" class="field__input" name="fio_director">
                                             </div>
                                         </div>
 
                                         <div class="dogovor__row" v-if="isLegal">
                                             <div class="field">
-                                                <div class="field__label">Основания действий директора</div>
+                                                <div class="field__label"><?php echo __( 'Основания действий директора', 'icdek' ) ?></div>
                                                 <input type="text" class="field__input" value="Устав" name="base_director">
                                             </div>
                                         </div>
 
                                         <div class="dogovor__row" v-if="!isSelf">
                                             <div class="field">
-                                                <div class="field__label">Телефон</div>
-                                                <input type="text" class="field__input" placeholder="Введите номер" data-required name="phone">
+                                                <div class="field__label"><?php echo __( 'Телефон', 'icdek' ) ?></div>
+                                                <input type="text" class="field__input" placeholder="<?php echo __( 'Введите номер', 'icdek' ) ?>" data-required name="phone">
                                             </div>
                                             <div class="field">
-                                                <div class="field__label">E-mail</div>
-                                                <input type="text" class="field__input" placeholder="Укажите e-mail" data-required name="email">
-                                            </div>
-                                        </div>
-
-                                        <div class="dogovor__row" v-if="isSelf">
-                                            <div class="field">
-                                                <div class="field__label">Серия и номер паспорта</div>
-                                                <input type="text" class="field__input" placeholder="Введите серию и номер паспорта" data-required name="passport_number">
-                                            </div>
-                                            <div class="field">
-                                                <div class="field__label">Дата выдачи паспорта</div>
-                                                <input type="text" class="field__input" placeholder="Выберите дату" data-required name="passport_date">
+                                                <div class="field__label"><?php echo __( 'E-mail', 'icdek' ) ?></div>
+                                                <input type="text" class="field__input" placeholder="<?php echo __( 'Укажите e-mail', 'icdek' ) ?>" data-required name="email">
                                             </div>
                                         </div>
 
                                         <div class="dogovor__row" v-if="isSelf">
                                             <div class="field">
-                                                <div class="field__label">Кем выдан паспорт</div>
+                                                <div class="field__label"><?php echo __( 'Серия и номер паспорта', 'icdek' ) ?></div>
+                                                <input type="text" class="field__input" placeholder="<?php echo __( 'Введите серию и номер паспорта', 'icdek' ) ?>" data-required name="passport_number">
+                                            </div>
+                                            <div class="field">
+                                                <div class="field__label"><?php echo __( 'Дата выдачи паспорта', 'icdek' ) ?></div>
+                                                <input type="text" class="field__input" placeholder="<?php echo __( 'Выберите дату', 'icdek' ) ?>" data-required name="passport_date">
+                                            </div>
+                                        </div>
+
+                                        <div class="dogovor__row" v-if="isSelf">
+                                            <div class="field">
+                                                <div class="field__label"><?php echo __( 'Кем выдан паспорт', 'icdek' ) ?></div>
                                                 <input type="text" class="field__input" data-required name="passport_point">
                                             </div>
                                             <div class="field">
-                                                <div class="field__label">Адрес регистрации</div>
-                                                <input type="text" class="field__input" placeholder="Введите адрес" data-required name="passport_address">
+                                                <div class="field__label"><?php echo __( 'Адрес регистрации', 'icdek' ) ?></div>
+                                                <input type="text" class="field__input" placeholder="<?php echo __( 'Введите адрес', 'icdek' ) ?>" data-required name="passport_address">
                                             </div>
                                         </div>
 
                                         <div class="dogovor__row">
                                             <div class="field">
-                                                <div class="field__label">Интернет-магазин?</div>
+                                                <div class="field__label"><?php echo __( 'Интернет-магазин', 'icdek' ) ?>?</div>
 
                                                 <div class="field__radios">
                                                     <label class="field field--checkbox">
                                                         <input type="radio" name="isShop" value="Да" v-model="isShop">
                                                         <span class="field__checkbox"></span>
-                                                        <span class="field__label">Да</span>
+                                                        <span class="field__label"><?php echo __( 'Да', 'icdek' ) ?></span>
                                                     </label>
                                                     <label class="field field--checkbox">
                                                         <input type="radio" name="isShop" value="Нет" v-model="isShop">
                                                         <span class="field__checkbox"></span>
-                                                        <span class="field__label">Нет</span>
+                                                        <span class="field__label"><?php echo __( 'Нет', 'icdek' ) ?></span>
                                                     </label>
                                                 </div>
                                             </div>
@@ -213,42 +213,42 @@
 
                                         <div class="dogovor__row" v-if="isSelf && isShop == 'Да'">
                                             <div class="field">
-                                                <div class="field__label">БИК банка</div>
-                                                <input type="number" class="field__input" placeholder="Введите БИК" data-required name="bik">
+                                                <div class="field__label"><?php echo __( 'БИК банка', 'icdek' ) ?></div>
+                                                <input type="number" class="field__input" placeholder="<?php echo __( 'Введите БИК', 'icdek' ) ?>" data-required name="bik">
                                             </div>
                                             <div class="field">
-                                                <div class="field__label">Расчетный счет</div>
-                                                <input type="text" class="field__input" placeholder="Введите номер" data-required name="payment">
+                                                <div class="field__label"><?php echo __( 'Расчетный счет', 'icdek' ) ?></div>
+                                                <input type="text" class="field__input" placeholder="<?php echo __( 'Введите номер', 'icdek' ) ?>" data-required name="payment">
                                             </div>
                                         </div>
 
                                         <div class="dogovor__row" v-if="isShop == 'Да'">
                                             <div class="field">
-                                                <div class="field__label">Адрес сайта</div>
-                                                <input type="text" class="field__input" placeholder="Введите ссылку" name="link">
+                                                <div class="field__label"><?php echo __( 'Адрес сайта', 'icdek' ) ?></div>
+                                                <input type="text" class="field__input" placeholder="<?php echo __( 'Введите ссылку', 'icdek' ) ?>" name="link">
                                             </div>
                                         </div>
                                         <div class="dogovor__row">
                                             <div class="field">
-                                                <div class="field__label">Комментарий (не обязательно)</div>
+                                                <div class="field__label"><?php echo __( 'Комментарий', 'icdek' ) ?> (<?php echo __( 'не обязательно', 'icdek' ) ?>)</div>
                                                 <textarea name="comments" class="field__textarea"></textarea>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="dogovor__section">
-                                        <div class="dogovor__subtitle">Адрес пункта выдачи СДЭК для возврата посылок</div>
+                                        <div class="dogovor__subtitle"><?php echo __( 'Адрес пункта выдачи СДЭК для возврата посылок', 'icdek' ) ?></div>
                                         <div class="dogovor__row">
                                             <div class="field">
-                                                <div class="field__label">Город</div>
-                                                <input type="text" class="field__input" placeholder="Введите город" data-required name="point_city" v-model="cityPoint">
+                                                <div class="field__label"><?php echo __( 'Город', 'icdek' ) ?></div>
+                                                <input type="text" class="field__input" placeholder="<?php echo __( 'Введите город', 'icdek' ) ?>" data-required name="point_city" v-model="cityPoint">
                                             </div>
                                         </div>
                                         <div class="dogovor__row" v-if="showMap">
                                             <div class="field">
-                                                <div class="field__label">Адрес пункта выдачи</div>
-                                                <div class="field__empty" v-if="!addressPoint"><?php get_svg('/icons/warning-circle-duotone.svg') ?>Пункт выдачи не выбран</div>
+                                                <div class="field__label"><?php echo __( 'Адрес пункта выдачи', 'icdek' ) ?></div>
+                                                <div class="field__empty" v-if="!addressPoint"><?php get_svg('/icons/warning-circle-duotone.svg') ?><?php echo __( 'Пункт выдачи не выбран', 'icdek' ) ?></div>
                                                 <div class="field__good" v-else><?php get_svg('/icons/check-circle-duotone.svg') ?>{{ addressPoint }}</div>
-                                                <span v-if="addressPoint" class="edit-point" @click="editPointAddress">Изменить</span>
+                                                <span v-if="addressPoint" class="edit-point" @click="editPointAddress"><?php echo __( 'Изменить', 'icdek' ) ?></span>
                                                 <input type="text" name="point_address" class="address-point" v-model="addressPoint" data-required="point">
                                             </div>
                                         </div>
@@ -257,9 +257,9 @@
                                             <div class="dogovor__map">
                                                 <div class="dogovor__loader" v-if="loader">
                                                     <div class="spinner"></div>
-                                                    <div class="dogovor__loader-text">Ищем пункты выдачи...</div>
+                                                    <div class="dogovor__loader-text"><?php echo __( 'Ищем пункты выдачи', 'icdek' ) ?>...</div>
                                                 </div>
-                                                <div class="dogovor__map-title">Выберите пункт выдачи на карте</div>
+                                                <div class="dogovor__map-title"><?php echo __( 'Выберите пункт выдачи на карте', 'icdek' ) ?></div>
                                                 <div id="points-map"></div>
                                             </div>
                                         </div>
@@ -268,11 +268,11 @@
                                         <label class="field field--checkbox">
                                             <input type="checkbox" class="agreement">
                                             <span class="field__checkbox"></span>
-                                            <span class="field__label">Даю свое <a href="<?php echo home_url('/agreement/') ?>" target="_blank">согласие на обработку персональный данных</a> в соответствии с <a href="<?php echo get_privacy_policy_url() ?>" target="_blank">Политикой конфиденциальности</a></span>
+                                            <span class="field__label"><?php echo __( 'Даю свое', 'icdek' ) ?> <a href="<?php echo home_url('/agreement/') ?>" target="_blank"><?php echo __( 'согласие на обработку персональный данных', 'icdek' ) ?></a> <?php echo __( 'в соответствии с', 'icdek' ) ?> <a href="<?php echo get_privacy_policy_url() ?>" target="_blank"><?php echo __( 'Политикой конфиденциальности', 'icdek' ) ?></a></span>
                                         </label>
                                     </div>
                                     <div class="dogovor__button">
-                                        <button class="button button--fill button--green" @click="submit">Отправить анкету</button>
+                                        <button class="button button--fill button--green" @click="submit"><?php echo __( 'Отправить анкету', 'icdek' ) ?></button>
                                     </div>
                                 </div>
                                 <input type="hidden" name="utm_source" value="<?php echo get_utm('utm_source') ?>">

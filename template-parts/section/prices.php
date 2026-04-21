@@ -23,33 +23,37 @@
                             <?php endforeach; ?>
                         </div>
                     <?php else : ?>
-                        <?php if (is_page('dostavka-dokumentov')) : ?>
+                        <?php if (is_page(['dostavka-dokumentov', 'document'])) : ?>
                             <div class="prices__doc">
                                 <div class="prices__doc-image">
                                     <img src="<?php echo get_template_directory_uri() . '/assets/images/cdek-document.png' ?>" alt="Конверты СДЭК" title="Отправка документов СДЭК">
                                 </div>
                                 <div class="prices__doc-items">
                                     <div class="prices__doc-item">
-                                        <div class="prices__doc-label">Максимальный вес:</div>
+                                        <div class="prices__doc-label"><?php echo __('Максимальный вес', 'icdek') ?>:</div>
                                         <div class="prices__doc-text">1 кг</div>
                                     </div>
                                     <div class="prices__doc-item">
-                                        <div class="prices__doc-label">Упаковка:</div>
-                                        <div class="prices__doc-text">фирменный конверт</div>
+                                        <div class="prices__doc-label"><?php echo __('Упаковка', 'icdek') ?>:</div>
+                                        <div class="prices__doc-text"><?php echo __( 'фирменный конверт', 'icdek' ) ?></div>
                                     </div>
                                     <div class="prices__doc-item">
-                                        <div class="prices__doc-label">Страхование:</div>
-                                        <div class="prices__doc-text">добровольное на усмотрение отправителя</div>
+                                        <div class="prices__doc-label"><?php echo __( 'Страхование', 'icdek' ) ?>:</div>
+                                        <div class="prices__doc-text"><?php echo __( 'добровольное на усмотрение отправителя', 'icdek' ) ?></div>
                                     </div>
                                     <div class="prices__doc-item">
-                                        <div class="prices__doc-label">Габариты конверта:</div>
+                                        <div class="prices__doc-label"><?php echo __( 'Габариты конверта', 'icdek' ) ?>:</div>
                                         <div class="prices__doc-text">34×27×2 см</div>
                                     </div>
                                     <div class="prices__doc-item">
-                                        <div class="prices__doc-label">Срок доставки:</div>
-                                        <div class="prices__doc-text">от 1 дня</div>
+                                        <div class="prices__doc-label"><?php echo __('Срок доставки', 'icdek') ?>:</div>
+                                        <div class="prices__doc-text"><?php echo __( 'от 1 дня', 'icdek' ) ?></div>
                                     </div>
                                 </div>
+                            </div>
+                        <?php elseif( $args['type'] == 'table' ) : ?>
+                            <div class="prices__table-table">
+                                <?php echo $args['table'] ?>
                             </div>
                         <?php else : ?>
                             <div class="prices__table">
@@ -59,16 +63,16 @@
                                     </div>
                                     <div class="prices__info">
                                         <div class="prices__info-item">
-                                            <div class="prices__label">Откуда:</div>
-                                            <div class="prices__value">Склад фулфилмента СДЭК</div>
+                                            <div class="prices__label"><?php echo __( 'Откуда', 'icdek' ) ?>:</div>
+                                            <div class="prices__value"><?php echo __( 'Склад фулфилмента СДЭК', 'icdek' ) ?></div>
                                         </div>
                                         <div class="prices__info-item">
-                                            <div class="prices__label">Куда:</div>
-                                            <div class="prices__value">Склад маркетплейса</div>
+                                            <div class="prices__label"><?php echo __( 'Куда', 'icdek' ) ?>:</div>
+                                            <div class="prices__value"><?php echo __( 'Склад маркетплейса', 'icdek' ) ?></div>
                                         </div>
                                         <div class="prices__info-item">
-                                            <div class="prices__label">Груз:</div>
-                                            <div class="prices__value">Коробка 60×40×40 см</div>
+                                            <div class="prices__label"><?php echo __( 'Груз', 'icdek' ) ?>:</div>
+                                            <div class="prices__value"><?php echo __( 'Коробка 60×40×40 см', 'icdek' ) ?></div>
                                         </div>
                                     </div>
                                 </div>

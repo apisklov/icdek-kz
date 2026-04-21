@@ -2,6 +2,7 @@
 
 add_action('element/button', 'output_element_button');
 add_action('element/messengers', 'output_element_messengers');
+add_action('element/lang', 'output_element_lang');
 
 add_action('section/intro', 'output_section_intro');
 add_action('section/features', 'output_section_features');
@@ -19,14 +20,7 @@ add_action('section/steps', 'output_section_steps');
 add_action('section/countries', 'output_section_countries');
 add_action('section/forward', 'output_section_forward');
 add_action('section/content', 'output_section_content');
-add_action('section/dashboard', 'output_section_dashboard');
 
-add_action('account/sidebar', 'output_account_sidebar');
-add_action('account/content', 'output_account_content');
-add_action('account/leads', 'output_account_leads');
-add_action('account/lead_info', 'output_account_lead_info');
-add_action('account/stats', 'output_account_stats');
-add_action('account/settings', 'output_account_settings');
 
 function output_element_button($args = [])
 {
@@ -46,6 +40,36 @@ function output_element_button($args = [])
 function output_element_messengers($args = [])
 {
     get_template_part('template-parts/element/messengers', null, $args);
+}
+
+function output_element_lang()
+{
+    global $post;
+
+    $args = [
+        'active' => 'ru',
+        'list' => []
+    ];
+
+    if (function_exists('pll_current_language')) {
+        $current = pll_current_language();
+        $args['active'] = $current;
+    }
+
+    if (function_exists('pll_languages_list')) {
+        $args['list'] = pll_languages_list();
+    }
+
+    $args['list'] = array_map(function ($locale) use ($post) {
+        $post_id = $post->ID;
+        $translated_id = pll_get_post($post_id, $locale);
+        return [
+            'locale' => $locale,
+            'link' => get_the_permalink($translated_id)
+        ];
+    }, pll_languages_list());
+
+    get_template_part('template-parts/element/lang', null, $args);
 }
 
 function output_section_intro($args = [])
@@ -205,6 +229,7 @@ function output_section_marketplace_scheme($args = [])
             'scroll' => '.section--calc'
         ];
     }
+
     get_template_part('template-parts/section/marketplace-scheme', null, $args);
 }
 
@@ -251,280 +276,4 @@ function output_section_forward($args = [])
 function output_section_content()
 {
     get_template_part('template-parts/section/content');
-}
-
-function output_account_sidebar()
-{
-    $args = [
-        'list' => []
-    ];
-
-    $args['list'] = [
-        [
-            'icon' => 'account',
-            'link' => 'account/',
-            'label' => 'Личный кабинет'
-        ],
-        [
-            'icon' => 'lightning',
-            'link' => 'account/partner/',
-            'label' => 'Партнерский раздел'
-        ],
-        [
-            'icon' => 'stats',
-            'link' => 'account/stats/',
-            'label' => 'Статистика'
-        ],
-        [
-            'icon' => 'leads',
-            'link' => 'account/leads/',
-            'label' => 'Клиенты'
-        ],
-        [
-            'icon' => 'personal',
-            'link' => 'account/settings/',
-            'label' => 'Личные данные'
-        ],
-        [
-            'icon' => 'logout',
-            'link' => 'account/logout/',
-            'label' => 'Выйти из кабинета'
-        ]
-    ];
-
-    if (current_user_can('cdek_admin')) {
-        unset($args['list'][1]);
-    }
-
-    if (current_user_can('cdek_partner')) {
-        unset($args['list'][2]);
-    }
-
-    get_template_part('template-parts/account/sidebar', null, $args);
-}
-
-function output_account_content()
-{
-    $account_section = get_query_var('account_section');
-    $lead_id = get_query_var('lead_id');
-
-    if (empty($account_section)) {
-        get_template_part('template-parts/account/panel');
-    } else if ($account_section == 'partner') {
-        get_template_part('template-parts/account/partner');
-    } else if ($account_section == 'settings') {
-        do_action('account/settings');
-    } else if ($account_section == 'stats') {
-        do_action('account/stats');
-    } else if ($account_section == 'leads') {
-        if (! empty($lead_id)) {
-            do_action('account/lead_info');
-        } else {
-            do_action('account/leads');
-        }
-    }
-}
-
-function output_account_leads()
-{
-    $args = [
-        'leads' => []
-    ];
-
-    $user_id = get_current_user_id();
-    $query_args = [
-        'post_type' => 'lead',
-        'posts_per_page' => -1,
-        'orderby' => 'date',
-        'order' => 'DESC',
-        'fields' => 'ids'
-    ];
-
-    if (current_user_can('cdek_partner')) {
-        $query_args['meta_query'] = [
-            [
-                'key' => 'lead_partner',
-                'value' => $user_id,
-                'compare' => '='
-            ]
-        ];
-    }
-
-    $query = new WP_Query($query_args);
-
-    $args['leads'] = $query->posts;
-
-    $args['leads'] = array_map(function ($lead_id) {
-        $lead_data = get_field('lead', $lead_id);
-        return [
-            'id' => $lead_id,
-            'name' => get_the_title($lead_id),
-            'phone' => $lead_data['phone'],
-            'email' => $lead_data['email'],
-            'date' => get_the_date('d.m.Y', $lead_id),
-            'partner' => $lead_data['partner']
-        ];
-    }, $args['leads']);
-
-    get_template_part('template-parts/account/leads', null, $args);
-}
-
-function output_account_lead_info()
-{
-    $lead_id = get_query_var('lead_id');
-
-    $args = [
-        'name' => '',
-        'date' => get_the_date('d.m.Y', $lead_id),
-        'data' => get_field('lead', $lead_id),
-        'error' => false
-    ];
-
-    $args['name'] = get_the_title($lead_id);
-
-    if (! get_permission_lead()) {
-        $args['error'] = 'У вас нет прав для просмотра данного клиента.';
-    }
-
-    get_template_part('template-parts/account/lead_info', null, $args);
-}
-
-function output_account_stats()
-{
-
-    if (!current_user_can('cdek_admin') && ! current_user_can('administrator')) {
-        return;
-    }
-
-    $args = [
-        'partners' => [],
-        'leads' => 0,
-        'prev_month_leads' => 0,
-        'current_month_leads' => 0
-    ];
-
-    $query_args = [
-        'post_type' => 'lead',
-        'post_status' => 'publish',
-        'posts_per_page' => -1,
-        'fields' => 'ids',
-        'update_post_meta_cache' => false,
-        'update_post_term_cache' => false,
-        'meta_query' => [
-            [
-                'key' => 'lead_partner',
-                'value' => '',
-                'compare' => '!='
-            ]
-        ]
-    ];
-
-    $partners = get_users([
-        'role' => 'cdek_partner',
-        'orderby' => 'registered',
-        'order' => 'DESC'
-    ]);
-
-    $partners = array_map(function ($partner) use ($query_args) {
-        $args = wp_parse_args(
-            ['meta_query' => [
-                [
-                    'key' => 'lead_partner',
-                    'value' => $partner->ID,
-                    'compare' => '='
-                ]
-            ]],
-            $query_args
-        );
-
-        $leads = new WP_Query($args);
-
-        return [
-            'id' => $partner->ID,
-            'name' => $partner->first_name,
-            'date' => date('d.m.Y', strtotime($partner->user_registered)),
-            'leads' => count($leads->posts)
-        ];
-    }, $partners);
-
-    $args['partners'] = $partners;
-
-    $leads = new WP_Query($query_args);
-    $args['leads'] = count($leads->posts);
-
-    // Клиентов за предыдущий месяц
-    $prev_month_leads = new WP_Query(
-        wp_parse_args(
-            [
-                'date_query' => [
-                    [
-                        'after' => 'first day of last month',
-                        'before' => 'last day of last month',
-                        'inclusive' => true
-                    ]
-                ]
-            ],
-            $query_args
-        )
-    );
-    $args['prev_month_leads'] = count($prev_month_leads->posts);
-
-    // Клиентов за текущий месяц
-    $current_month_leads = new WP_Query(
-        wp_parse_args(
-            [
-                'date_query' => [
-                    [
-                        'after' => 'first day of this month',
-                        'before' => 'last day of this month',
-                        'inclusive' => true
-                    ]
-                ]
-            ],
-            $query_args
-        )
-    );
-    $args['current_month_leads'] = count($current_month_leads->posts);
-
-    get_template_part('template-parts/account/stats', null, $args);
-}
-
-function output_account_settings()
-{
-    $user = wp_get_current_user();
-
-    $args = [];
-
-    if (is_user_logged_in()) {
-        $args = [
-            'name' => $user->first_name,
-            'email' => $user->user_email,
-            'login' => $user->user_login,
-            'city' => get_user_meta($user->ID, 'city', true)
-        ];
-    }
-
-    get_template_part('template-parts/account/settings', null, $args);
-}
-
-function output_section_dashboard()
-{
-    $args = [
-        'list' => []
-    ];
-
-    $partners = get_users([
-        'role' => 'cdek_partner',
-        'orderby' => 'registered',
-        'order' => 'DESC'
-    ]);
-
-    foreach ($partners as $partner) {
-        $args['list'][] = [
-            'user' => $partner,
-            'stats' => get_partner_stats($partner->ID)
-        ];
-    }
-
-    get_template_part('template-parts/section/dashboard', null, $args);
 }

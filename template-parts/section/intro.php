@@ -42,7 +42,7 @@
                                         <img src="<?php echo get_template_directory_uri() . '/assets/images/manager_1.png' ?>" alt="Фото менеджера СДЭК" title="Менеджер СДЭК">
                                         <img src="<?php echo get_template_directory_uri() . '/assets/images/manager_2.png' ?>" alt="Фото менеджера СДЭК" title="Менеджер СДЭК">
                                     </div>
-                                    <div class="manager__desc">С вами свяжется менеджер и ответит на все вопросы</div>
+                                    <div class="manager__desc"><?php echo __( 'С вами свяжется менеджер и ответит на все вопросы', 'icdek' ) ?></div>
                                 </div>
                             </div>
                         <?php endif; ?>

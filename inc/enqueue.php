@@ -61,35 +61,4 @@ function enqueue_theme_scripts()
             'in_footer' => true
         ]
     );
-
-    wp_register_script(
-        'account',
-        get_template_directory_uri() . '/assets/js/account.min.js',
-        null,
-        filemtime(get_theme_file_path('/assets/js/account.min.js')),
-        [
-            'in_footer' => true
-        ]
-    );
-
-    $partner_id = 0;
-
-    if( current_user_can('cdek_partner') ) {
-        $user_id = get_current_user_id();
-        $partner_id = get_user_meta( $user_id, 'partner_id', true );
-    }
-
-    $script_data = [
-        'qr_link' => rest_url( 'partner/v1/qr/' )
-    ];
-
-    if( $partner_id ) {
-        $script_data['partner_id'] = $partner_id;
-    }
-
-    wp_add_inline_script(
-        'account',
-        'const ACCOUNT_DATA = ' . json_encode( $script_data ) . ';',
-        'before'
-    );
 }

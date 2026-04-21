@@ -19,7 +19,7 @@
                                             <img src="<?php echo get_template_directory_uri() . '/assets/images/manager_1.png' ?>" alt="Фото менеджера СДЭК" title="Менеджер СДЭК">
                                         </div>
 
-                                        <div class="manager__desc">Юлия свяжется с вами для обсуждения условий</div>
+                                        <div class="manager__desc"><?php echo __( 'Юлия свяжется с вами для обсуждения условий', 'icdek' ) ?></div>
                                     </div>
                                 </div>
                             <?php endif; ?>

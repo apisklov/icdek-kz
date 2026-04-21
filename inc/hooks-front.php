@@ -6,6 +6,8 @@ add_filter('nav_menu_link_attributes', 'nav_menu_attr_link', 10, 4);
 add_filter('nav_menu_submenu_css_class', 'nav_menu_submenu_css_class', 10, 3);
 add_filter( 'body_class', 'add_body_classes', 10, 2 );
 add_filter( 'wp_get_attachment_image_attributes', 'set_add_attr_for_attachment_image', 10, 3 );
+add_action('after_setup_theme', 'icdek_load_theme_textdomain');
+
 
 function nav_menu_class_item($classes, $item, $args)
 {
@@ -82,4 +84,49 @@ function set_add_attr_for_attachment_image( $attr, $post, $size ) {
     }
 
     return $attr;
+}
+
+add_filter( 'wpseo_title', function( $title, $presentation ) {
+    global $post;
+
+    $title_yoast = get_post_meta( $post->ID, '_yoast_wpseo_title', true );
+
+    if( $title_yoast ) {
+        return $title_yoast;
+    }
+
+    return $title;
+}, 10, 2 );
+
+add_filter( 'wpseo_metadesc', function( $desc ) {
+    global $post;
+
+    $desc_yoast = get_post_meta( $post->ID, '_yoast_wpseo_metadesc', true );
+
+    if( $desc_yoast ) {
+        return $desc_yoast;
+    }
+    
+    return $desc;
+}, 10, 2 );
+
+add_filter( 'dogovor_link', function( $link ) {
+
+    if( function_exists( 'pll_current_language' ) ) {
+        $lang = pll_current_language();
+        
+        if( $lang == 'kk' ) {
+            return home_url( 'kk/contract' );
+        }
+    }
+
+    return $link;
+} );
+
+/**
+ * Локализация шаблона
+ */
+function icdek_load_theme_textdomain()
+{
+    load_theme_textdomain('icdek', get_template_directory() . '/language');
 }

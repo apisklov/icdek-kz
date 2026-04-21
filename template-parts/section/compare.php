@@ -15,76 +15,76 @@
                         <div class="compare__table">
                             <div class="compare__row head">
                                 <div class="compare__col"></div>
-                                <div class="compare__col">Без договора</div>
-                                <div class="compare__col light">С договором</div>
+                                <div class="compare__col"><?php echo __('Без договора', 'icdek') ?></div>
+                                <div class="compare__col light"><?php echo __('С договором', 'icdek') ?></div>
                             </div>
                             <div class="compare__row">
-                                <div class="compare__col">Тариф «Посылка» от 125 руб за 3 кг</div>
+                                <div class="compare__col"><?php echo __('Тариф «Посылка» от 950 ₸ за 3 кг', 'icdek') ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_no.svg' ) ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_yes.svg' ) ?></div>
                             </div>
                             <div class="compare__row">
-                                <div class="compare__col">Наложенный платёж</div>
+                                <div class="compare__col"><?php echo __('Наложенный платёж', 'icdek') ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_no.svg' ) ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_yes.svg' ) ?></div>
                             </div>
                             <div class="compare__row">
-                                <div class="compare__col">Бесплатная частичная доставка</div>
+                                <div class="compare__col"><?php echo __('Бесплатная частичная доставка', 'icdek') ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_no.svg' ) ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_yes.svg' ) ?></div>
                             </div>
                             <div class="compare__row">
-                                <div class="compare__col">Бесплатный осмотр вложения</div>
+                                <div class="compare__col"><?php echo __('Бесплатный осмотр вложения', 'icdek') ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_no.svg' ) ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_yes.svg' ) ?></div>
                             </div>
                             <div class="compare__row">
-                                <div class="compare__col">Бесплатная примерка</div>
+                                <div class="compare__col"><?php echo __('Бесплатная примерка', 'icdek') ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_no.svg' ) ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_yes.svg' ) ?></div>
                             </div>
                             <div class="compare__row">
-                                <div class="compare__col">Бесплатная упаковка</div>
+                                <div class="compare__col"><?php echo __('Бесплатная упаковка', 'icdek') ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_no.svg' ) ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_yes.svg' ) ?></div>
                             </div>
                             <div class="compare__row">
-                                <div class="compare__col">Постоплата за услуги</div>
+                                <div class="compare__col"><?php echo __('Постоплата за услуги', 'icdek') ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_no.svg' ) ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_yes.svg' ) ?></div>
                             </div>
                             <div class="compare__row">
-                                <div class="compare__col">Интеграция с базой СДЭК по API-протоколу</div>
+                                <div class="compare__col"><?php echo __('Интеграция с базой СДЭК по API-протоколу', 'icdek') ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_no.svg' ) ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_yes.svg' ) ?></div>
                             </div>
                             <div class="compare__row">
-                                <div class="compare__col">Бесплатное хранение 14 дней</div>
+                                <div class="compare__col"><?php echo __('Бесплатное хранение 14 дней', 'icdek') ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_no.svg' ) ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_yes.svg' ) ?></div>
                             </div>
                             <div class="compare__row">
-                                <div class="compare__col">Закрепленный менеджер</div>
+                                <div class="compare__col"><?php echo __('Закрепленный менеджер', 'icdek') ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_no.svg' ) ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_yes.svg' ) ?></div>
                             </div>
                             <div class="compare__row">
-                                <div class="compare__col">Отслеживание заказа</div>
+                                <div class="compare__col"><?php echo __('Отслеживание заказа', 'icdek') ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_yes.svg' ) ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_yes.svg' ) ?></div>
                             </div>
                             <div class="compare__row">
-                                <div class="compare__col">Страхование</div>
+                                <div class="compare__col"><?php echo __('Страхование', 'icdek') ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_yes.svg' ) ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_yes.svg' ) ?></div>
                             </div>
                             <div class="compare__row">
-                                <div class="compare__col">Личный кабинет</div>
+                                <div class="compare__col"><?php echo __('Личный кабинет', 'icdek') ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_yes.svg' ) ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_yes.svg' ) ?></div>
                             </div>
                             <div class="compare__row">
-                                <div class="compare__col">СМС-оповещение</div>
+                                <div class="compare__col"><?php echo __('СМС-оповещение', 'icdek') ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_yes.svg' ) ?></div>
                                 <div class="compare__col"><?php get_svg( '/icons/compare_yes.svg' ) ?></div>
                             </div>
@@ -93,13 +93,13 @@
                                 <div class="compare__col"></div>
                                 <div class="compare__col">
                                     <div class="compare__border"></div>
-                                    <a href="#" data-scroll-to="#dogovor" class="button button--green button--fill">Заключить договор</a>
+                                    <a href="#" data-scroll-to="#dogovor" class="button button--green button--fill"><?php echo __('Заключить договор', 'icdek') ?></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="compare__button">
-                        <a href="#" data-scroll-to="#dogovor" class="button button--green button--fill">Заключить договор</a>
+                        <a href="#" data-scroll-to="#dogovor" class="button button--green button--fill"><?php echo __('Заключить договор', 'icdek') ?></a>
                     </div>
                 </div>
             </div>

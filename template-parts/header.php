@@ -49,72 +49,54 @@
                     <?php else : ?>
                         <a href="<?php echo home_url() ?>"><?php get_svg('/images/logo.svg') ?></a>
                     <?php endif; ?>
-                    <?php if (is_account_page()) : ?>
-                        • Личный кабинет партнера
-                    <?php endif; ?>
-                </div>
-                <?php if (! is_account_page()) : ?>
-                    <div class="header__nav">
-                        <?php if (has_nav_menu('header')) : ?>
-                            <nav class="nav">
-                                <?php wp_nav_menu(
-                                    [
-                                        'theme_location' => 'header',
-                                        'container' => false,
-                                        'container_class' => '',
-                                        'menu_class' => 'nav__list',
-                                        'item_class' => 'nav__item',
-                                        'link_class' => 'nav__link',
-                                        'items_wrap' => '<ul class="%2$s">%3$s</ul>',
-                                    ]
-                                ); ?>
-                            </nav>
-                        <?php endif; ?>
+                    <div class="header__lang">
+                        <?php do_action( 'element/lang' ) ?>
                     </div>
-                    <?php if (! is_forward()) : ?>
-                        <div class="header__contacts">
-                            <a href="tel:<?php echo get_setting('phone') ?>" class="header__phone"><?php echo get_setting('phone') ?></a>
-                            <div class="header__messengers">
-                                <?php do_action('element/messengers') ?>
-                            </div>
+                </div>
+                <div class="header__nav">
+                    <?php if (has_nav_menu('header')) : ?>
+                        <nav class="nav">
+                            <?php wp_nav_menu(
+                                [
+                                    'theme_location' => 'header',
+                                    'container' => false,
+                                    'container_class' => '',
+                                    'menu_class' => 'nav__list',
+                                    'item_class' => 'nav__item',
+                                    'link_class' => 'nav__link',
+                                    'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+                                ]
+                            ); ?>
+                        </nav>
+                </div>
+                <?php if (! is_forward()) : ?>
+                    <div class="header__contacts">
+                        <a href="tel:<?php echo get_setting('phone') ?>" class="header__phone"><?php echo get_setting('phone') ?></a>
+                        <div class="header__messengers">
+                            <?php do_action('element/messengers') ?>
                         </div>
-                    <?php endif; ?>
-                    <div class="header__button">
-                        <?php if (is_forward()) : ?>
-                            <?php do_action('element/button', [
-                                'text' => esc_html('Зарегистрироваться', 'icdek'),
-                                'action' => 'link',
-                                'link' => get_setting('link_forward'),
-                                'classes' => 'button--small'
-                            ]) ?>
-                        <?php elseif( is_page( 'promo' ) ) : ?>
-                            <?php do_action('element/button', [
-                                'text' => esc_html('Личный кабинет', 'icdek'),
-                                'action' => 'link',
-                                'link' => home_url('/account/'),
-                                'classes' => 'button--small'
-                            ]) ?>
-                        <?php else : ?>
-                            <?php do_action('element/button', [
-                                'text' => esc_html('Заключить договор', 'icdek'),
-                                'action' => 'link',
-                                'link' => home_url('/zaklyuchit-dogovor/'),
-                                'classes' => 'button--small'
-                            ]) ?>
-                        <?php endif; ?>
                     </div>
-                    <?php if (! is_forward()) : ?>
-                        <a href="tel:<?php echo get_setting('phone') ?>" class="header__call">
-                            <?php get_svg('/icons/phone.svg') ?>
-                        </a>
-                    <?php endif; ?>
                 <?php endif; ?>
-                <div class="header__burger">
-                    <div class="burger">
-                        <div class="burger__open"><?php get_svg('/icons/burger.svg') ?></div>
-                        <div class="burger__close"><?php get_svg('/icons/close.svg') ?></div>
-                    </div>
+                <div class="header__button">
+                    <?php do_action('element/button', [
+                            'text' => esc_html('Заключить договор', 'icdek'),
+                            'action' => 'link',
+                            'link' => apply_filters( 'dogovor_link', home_url('/dogovor/') ),
+                            'classes' => 'button--small'
+                        ]) ?>
                 </div>
+                <?php if (! is_forward()) : ?>
+                    <a href="tel:<?php echo get_setting('phone') ?>" class="header__call">
+                        <?php get_svg('/icons/phone.svg') ?>
+                    </a>
+                <?php endif; ?>
+            <?php endif; ?>
+            <div class="header__burger">
+                <div class="burger">
+                    <div class="burger__open"><?php get_svg('/icons/burger.svg') ?></div>
+                    <div class="burger__close"><?php get_svg('/icons/close.svg') ?></div>
+                </div>
+            </div>
             </div>
         </div>
     </header>

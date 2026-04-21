@@ -12,7 +12,7 @@
             <div class="section__content">
                 <div class="marketplace-scheme">
                     <div class="marketplace-scheme__wrapper">
-                        <div class="marketplace-scheme__list">
+                        <div class="marketplace-scheme__list columns-<?php echo count( $args['list'] ) ?>">
                             <?php foreach ($args['list'] as $item) : ?>
                                 <div class="marketplace-scheme__item">
                                     <?php if (! empty($item['types'])) : ?>
@@ -30,12 +30,12 @@
                                     <?php if (! empty($item['services'])) : ?>
                                         <div class="marketplace-scheme__services">
                                             <?php foreach ($item['services'] as $service) : ?>
-                                                <div class="marketplace-scheme__service"><?php echo esc_html($service) ?></div>
+                                                <div class="marketplace-scheme__service"><?php echo __($service, 'icdek') ?></div>
                                             <?php endforeach; ?>
                                         </div>
                                     <?php endif; ?>
                                     <?php if (! empty($item['desc'])) : ?>
-                                        <div class="marketplace-scheme__desc"><?php echo $item['desc'] ?></div>
+                                        <div class="marketplace-scheme__desc"><?php echo __($item['desc'], 'icdek') ?></div>
                                     <?php endif; ?>
                                     <?php if (! empty($item['shops'])) : ?>
                                         <div class="marketplace-scheme__shops">

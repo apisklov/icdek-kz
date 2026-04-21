@@ -13,5 +13,5 @@ include get_template_directory() . '/inc/modules/dogovor.php';
 include get_template_directory() . '/inc/modules/tracking.php';
 include get_template_directory() . '/inc/modules/form.php';
 include get_template_directory() . '/inc/modules/sitemap.php';
-include get_template_directory() . '/inc/modules/account/account.php';
+
 include get_template_directory() . '/inc/modules/analytics/analytics.php';

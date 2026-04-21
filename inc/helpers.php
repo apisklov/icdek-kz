@@ -57,7 +57,7 @@ function get_setting($name = '')
     $setting = get_field($name, 'option');
 
     if ($setting) {
-        return apply_filters( 'setting/' . $name,  $setting );
+        return apply_filters('setting/' . $name,  $setting);
     }
 
     return null;
@@ -183,7 +183,7 @@ function send_data($url, $data)
     if (is_wp_error($response)) {
         wp_send_json_error($response->get_error_message());
     } else {
-        return json_decode(wp_remote_retrieve_body( $response ), true);
+        return json_decode(wp_remote_retrieve_body($response), true);
     }
 }
 
@@ -220,6 +220,10 @@ function get_shop_html_class($name = '')
             return 'ym';
         case 'МЕГАМАРКЕТ':
             return 'mg';
+        case 'KASPI':
+            return 'kaspi';
+        case 'FLIP':
+            return 'flip';
     }
 }
 
@@ -254,7 +258,7 @@ function add_lead($data = [])
 
     $meta_data = [];
 
-    if( ! empty( $data['partner_id'] ) ) {
+    if (! empty($data['partner_id'])) {
         $find_partner = get_users([
             'role' => 'cdek_partner',
             'meta_key' => 'partner_id',
@@ -262,7 +266,7 @@ function add_lead($data = [])
             'number' => 1,
             'count_total' => false,
         ]);
-    
+
         if (! empty($find_partner)) {
             $post_data['post_author'] = $find_partner[0]->ID;
             $meta_data['partner'] = $find_partner[0]->ID;
@@ -293,98 +297,98 @@ function add_lead($data = [])
     }
 
     $meta_data['person'] = $person_value;
-    
-    if( ! empty( $data['name'] ) ) {
+
+    if (! empty($data['name'])) {
         $meta_data['name'] = $data['name'];
     }
 
-    if( ! empty( $data['date_birth'] ) ) {
+    if (! empty($data['date_birth'])) {
         $meta_data['date_birth'] = $data['date_birth'];
     }
 
-    if( ! empty( $data['passport_number'] ) ) {
+    if (! empty($data['passport_number'])) {
         $meta_data['passport_number'] = $data['passport_number'];
     }
 
-    if( ! empty( $data['passport_date'] ) ) {
+    if (! empty($data['passport_date'])) {
         $meta_data['passport_date'] = $data['passport_date'];
     }
 
-    if( ! empty( $data['passport_point'] ) ) {
+    if (! empty($data['passport_point'])) {
         $meta_data['passport_point'] = $data['passport_point'];
     }
 
-    if( ! empty( $data['passport_address'] ) ) {
+    if (! empty($data['passport_address'])) {
         $meta_data['passport_address'] = $data['passport_address'];
     }
 
-    if( ! empty( $data['inn'] ) ) {
+    if (! empty($data['inn'])) {
         $meta_data['inn'] = $data['inn'];
     }
 
-    if( ! empty( $data['address_legal'] ) ) {
+    if (! empty($data['address_legal'])) {
         $meta_data['address_legal'] = $data['address_legal'];
     }
 
-    if( ! empty( $data['address_fact'] ) ) {
+    if (! empty($data['address_fact'])) {
         $meta_data['address_fact'] = $data['address_fact'];
     }
 
-    if( ! empty( $data['number_license'] ) ) {
+    if (! empty($data['number_license'])) {
         $meta_data['number_license'] = $data['number_license'];
     }
 
-    if( ! empty( $data['date_license'] ) ) {
+    if (! empty($data['date_license'])) {
         $meta_data['date_license'] = $data['date_license'];
     }
 
-    if( ! empty( $data['bik'] ) ) {
+    if (! empty($data['bik'])) {
         $meta_data['bik'] = $data['bik'];
     }
 
-    if( ! empty( $data['payment'] ) ) {
+    if (! empty($data['payment'])) {
         $meta_data['payment'] = $data['payment'];
     }
 
-    if( ! empty( $data['fio_anketa'] ) ) {
+    if (! empty($data['fio_anketa'])) {
         $meta_data['fio_anketa'] = $data['fio_anketa'];
     }
 
-    if( ! empty( $data['fio_director'] ) ) {
+    if (! empty($data['fio_director'])) {
         $meta_data['fio_director'] = $data['fio_director'];
     }
 
-    if( ! empty( $data['base_director'] ) ) {
+    if (! empty($data['base_director'])) {
         $meta_data['base_director'] = $data['base_director'];
     }
 
-    if( ! empty( $data['phone'] ) ) {
+    if (! empty($data['phone'])) {
         $meta_data['phone'] = $data['phone'];
     }
 
-    if( ! empty( $data['email'] ) ) {
+    if (! empty($data['email'])) {
         $meta_data['email'] = $data['email'];
     }
 
-    if( ! empty( $data['link'] ) ) {
+    if (! empty($data['link'])) {
         $meta_data['link'] = $data['link'];
     }
 
-    if( ! empty( $data['comments'] ) ) {
+    if (! empty($data['comments'])) {
         $meta_data['comments'] = $data['comments'];
     }
 
-    if( ! empty( $data['point_city'] ) ) {
+    if (! empty($data['point_city'])) {
         $meta_data['point_city'] = $data['point_city'];
     }
 
-    if( ! empty( $data['point_address'] ) ) {
+    if (! empty($data['point_address'])) {
         $meta_data['point_address'] = $data['point_address'];
     }
 
-    $post_id = wp_insert_post( $post_data, true );
+    $post_id = wp_insert_post($post_data, true);
 
-    if( ! is_wp_error( $post_id ) ) {
+    if (! is_wp_error($post_id)) {
         update_field('lead', $meta_data, $post_id);
         return $post_id;
     }
@@ -414,7 +418,8 @@ function format_price($price = 0, $currency = '₽')
  * @param  mixed $utm
  * @return void
  */
-function get_utm( $utm = '' ) {
+function get_utm($utm = '')
+{
 
     if (!$utm) {
         return null;
@@ -431,4 +436,24 @@ function get_utm( $utm = '' ) {
     }
 
     return null;
+}
+
+/**
+ * Возвращает название языка по коду
+ *
+ * @param  mixed $code
+ * @return void
+ */
+function get_lang_name_by_code($code)
+{
+    $lang = [
+        'ru' => 'Русский',
+        'kk' => 'Қазақ тілі'
+    ];
+
+    if (isset($lang[$code])) {
+        return $lang[$code];
+    }
+
+    return '';
 }

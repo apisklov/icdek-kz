@@ -56,7 +56,8 @@
                     },
                     "choices": {
                         "services": "Услуги",
-                        "delivery": "Доставка"
+                        "delivery": "Доставка",
+                        "table": "Таблица"
                     },
                     "default_value": "",
                     "return_format": "value",
@@ -141,6 +142,35 @@
                     ]
                 },
                 {
+                    "key": "field_69e5e1cbb5e1d",
+                    "label": "Таблица",
+                    "name": "table",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6791cec50d093",
+                                "operator": "==",
+                                "value": "table"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
                     "key": "field_67932ae646ffd",
                     "label": "Текст заявки",
                     "name": "text",
@@ -204,5 +234,8 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753071909
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1776673252
 }

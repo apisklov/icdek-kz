@@ -31,7 +31,7 @@
                                 <div class="manager manager--hero">
                                     <div class="manager__photo"><img src="<?php echo get_template_directory_uri() . '/assets/images/manager_1.png' ?>" alt="Фото менеджера СДЭК" title="Менеджер СДЭК"></div>
                                     <div class="manager__name">Юлия</div>
-                                    <div class="manager__desc">Менеджер i-cdek.ru</div>
+                                    <div class="manager__desc">Менеджер i-cdek.kz</div>
                                 </div>
                             </div>
                             <div class="features__buttons">

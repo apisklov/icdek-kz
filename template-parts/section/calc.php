@@ -12,10 +12,10 @@
                     <div class="table">
                         <table>
                             <tr>
-                                <th>Откуда</th>
-                                <th>Куда</th>
-                                <th>Стоимость</th>
-                                <th>Сроки доставки</th>
+                                <th><?php echo __('Откуда', 'icdek') ?></th>
+                                <th><?php echo __('Куда', 'icdek') ?></th>
+                                <th><?php echo __('Стоимость', 'icdek') ?></th>
+                                <th><?php echo __('Сроки доставки', 'icdek') ?></th>
                             </tr>
                             <?php foreach ($args['table'] as $row) : ?>
                                 <tr>
@@ -39,13 +39,13 @@
                                 <div class="calc__field calc__field--point">
                                     <div class="field">
                                         <div class="field__label"><?php esc_html_e('Откуда', 'icdek') ?></div>
-                                        <input type="text" class="field__input" placeholder="Город отправления" data-required="suggest" name="from" id="calc-from">
+                                        <input type="text" class="field__input" placeholder="<?php echo __( 'Город отправления', 'icdek' ) ?>" data-required="suggest" name="from" id="calc-from">
                                     </div>
                                 </div>
                                 <div class="calc__field calc__field--point">
                                     <div class="field">
                                         <div class="field__label"><?php esc_html_e('Куда', 'icdek') ?></div>
-                                        <input type="text" class="field__input" placeholder="Город назначения" data-required="suggest" name="to" id="calc-to">
+                                        <input type="text" class="field__input" placeholder="<?php echo __( 'Город назначения', 'icdek' ) ?>" data-required="suggest" name="to" id="calc-to">
                                     </div>
                                 </div>
                                 <div class="calc__field calc__field--cargo">
@@ -62,7 +62,7 @@
                                             </div>
                                         </div>
                                         <div class="field field--weight">
-                                            <div class="field__label" v-if="key == 0">Вес, кг</div>
+                                            <div class="field__label" v-if="key == 0"><?php echo __('Вес, кг', 'icdek') ?></div>
                                             <input type="number" class="field__input" placeholder="2.5" data-required="weight" v-model="item.weight" step="0.1">
                                         </div>
                                     </div>

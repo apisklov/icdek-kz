@@ -7,7 +7,7 @@
                 <div class="footer__cdek"><a href="https://cdek.ru" target="_blank"><?php esc_html_e('Официальный сайт СДЭК', 'icdek') ?></a></div>
                 <div class="footer__privacy">
                     <a href="<?php echo get_privacy_policy_url() ?>">Политика конфиденциальности</a>
-                    <a href="<?php echo home_url( 'agreement/' ) ?>">Согласие на обработку персональных данных</a>
+                    <a href="<?php echo home_url('agreement/') ?>">Согласие на обработку персональных данных</a>
                 </div>
             </div>
             <div class="footer__column">
@@ -82,21 +82,12 @@
                     <a href="mailto:<?php echo get_setting('email') ?>" class="footer__email"><?php echo get_setting('email') ?></a>
                 <?php endif; ?>
                 <div class="footer__button">
-                    <?php if (is_forward()) : ?>
-                        <?php do_action( 'element/button', [
-                            'text' => esc_html( 'Зарегистрироваться', 'icdek' ),
-                            'action' => 'link',
-                            'link' => get_setting( 'link_forward' ),
-                            'classes' => 'button--small'
-                        ]) ?>
-                    <?php else : ?>
-                        <?php do_action( 'element/button', [
-                            'text' => esc_html( 'Заключить договор', 'icdek' ),
-                            'action' => 'link',
-                            'link' => home_url('/zaklyuchit-dogovor/'),
-                            'classes' => 'button--small'
-                        ]) ?>
-                    <?php endif; ?>
+                    <?php do_action('element/button', [
+                        'text' => esc_html('Заключить договор', 'icdek'),
+                        'action' => 'link',
+                        'link' => apply_filters( 'dogovor_link', home_url('/dogovor/') ),
+                        'classes' => 'button--small'
+                    ]) ?>
                 </div>
             </div>
         </div>
