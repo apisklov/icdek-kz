@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ICDEK\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-19 14:11+0000\n"
-"PO-Revision-Date: 2026-04-21 06:44+0000\n"
+"PO-Revision-Date: 2026-04-21 16:40+0000\n"
 "Last-Translator: \n"
 "Language-Team: Kazakh\n"
 "Language: kk\n"
@@ -387,9 +387,19 @@ msgstr "Біз ақпарат аламыз"
 msgid "Получить консультацию"
 msgstr "Кеңес алыңыз"
 
+#: inc/supports.php:45
+msgid ""
+"Пользуясь нашим сайтом, вы соглашаетесь с тем, что мы используем cookies"
+msgstr ""
+"Біздің сайтты пайдалану арқылы сіз cookies-ті қолданатынымызға келісесіз"
+
 #: template-parts/section/compare.php:52
 msgid "Постоплата за услуги"
 msgstr "Қызметтер үшін кейінгі төлем"
+
+#: inc/supports.php:47
+msgid "Принять"
+msgstr "Қабылдау"
 
 #. Name of the template
 #: page/page-promo.php:3
