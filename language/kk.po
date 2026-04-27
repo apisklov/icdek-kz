@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ICDEK\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-19 14:11+0000\n"
-"PO-Revision-Date: 2026-04-26 09:35+0000\n"
+"PO-Revision-Date: 2026-04-27 15:37+0000\n"
 "Last-Translator: \n"
 "Language-Team: Kazakh\n"
 "Language: kk\n"
@@ -254,7 +254,7 @@ msgstr "Мен өзімді беремін"
 msgid "Добавить еще"
 msgstr "Көбірек қосыңыз"
 
-#: template-parts/footer.php:14
+#: template-parts/footer.php:13
 msgid "Договор"
 msgstr "Шарт"
 
@@ -479,6 +479,10 @@ msgstr "Төлқұжат"
 msgid "Пожалуйста, заполните все обязательные поля"
 msgstr "Барлық қажетті өрістерді толтырыңыз"
 
+#: template-parts/footer.php:9
+msgid "Политика конфиденциальности"
+msgstr "Құпиялылық саясаты"
+
 #: template-parts/element/popup.php:50 template-parts/element/popup.php:81
 #: template-parts/element/popup.php:112 template-parts/section/dogovor.php:274
 #: template-parts/section/dogovor.php:501
@@ -561,7 +565,7 @@ msgstr "SMS-хабарлама"
 msgid "Самозанятый гражданин"
 msgstr "Өзін-өзі жұмыспен қамтыған азамат"
 
-#: template-parts/footer.php:54
+#: template-parts/footer.php:53
 msgid "Сервисы"
 msgstr "Қызметтер"
 
@@ -637,7 +641,7 @@ msgstr "Электрондық поштаны көрсетіңіз"
 msgid "Упаковка"
 msgstr "Орау"
 
-#: template-parts/footer.php:34
+#: template-parts/footer.php:33
 msgid "Услуги"
 msgstr "Қызметтер"
 

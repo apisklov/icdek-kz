@@ -6,8 +6,7 @@
                 <div class="footer__logo"><?php get_svg('/images/logo.svg') ?></div>
                 <div class="footer__cdek"><a href="https://cdek.ru" target="_blank"><?php esc_html_e('Официальный сайт СДЭК', 'icdek') ?></a></div>
                 <div class="footer__privacy">
-                    <a href="<?php echo get_privacy_policy_url() ?>">Политика конфиденциальности</a>
-                    <a href="<?php echo home_url('agreement/') ?>">Согласие на обработку персональных данных</a>
+                    <a href="<?php echo get_privacy_policy_url() ?>"><?php echo __( 'Политика конфиденциальности', 'icdek' ) ?></a>
                 </div>
             </div>
             <div class="footer__column">
