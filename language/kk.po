@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ICDEK\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-19 14:11+0000\n"
-"PO-Revision-Date: 2026-04-21 16:40+0000\n"
+"PO-Revision-Date: 2026-04-26 09:35+0000\n"
 "Last-Translator: \n"
 "Language-Team: Kazakh\n"
 "Language: kk\n"
@@ -15,9 +15,21 @@ msgstr ""
 "X-Loco-Version: 2.8.3; wp-6.9.4; php-7.4.27\n"
 "X-Domain: icdek"
 
-#: template-parts/section/dogovor.php:77 template-parts/section/dogovor.php:168
+#: template-parts/section/dogovor.php:297
+msgid "B2B-доставка груза до 200 €"
+msgstr "B2B-доставка груза до 200 €"
+
+#: template-parts/section/dogovor.php:302
+msgid "B2B-доставка груза свыше 200 €"
+msgstr "B2B-200 евродан жоғары жүкті жеткізу"
+
+#: template-parts/section/dogovor.php:80 template-parts/section/dogovor.php:171
 msgid "E-mail"
 msgstr "Электрондық пошта"
+
+#: template-parts/section/dogovor.php:374
+msgid "E-mail контактного лица"
+msgstr "Байланыс тұлғасының E-mail"
 
 #. Author URI of the theme
 msgid "https://wpevo.ru"
@@ -31,19 +43,27 @@ msgstr ""
 msgid "WP Evo"
 msgstr ""
 
-#: template-parts/section/dogovor.php:248
+#: template-parts/section/dogovor.php:330
+msgid "Адрес отправителя"
+msgstr "Жіберушінің мекен-жайы"
+
+#: template-parts/section/dogovor.php:344
+msgid "Адрес получателя"
+msgstr "Алушының мекен-жайы"
+
+#: template-parts/section/dogovor.php:251
 msgid "Адрес пункта выдачи"
 msgstr "Жеткізу нүктесінің мекенжайы"
 
-#: template-parts/section/dogovor.php:239
+#: template-parts/section/dogovor.php:242
 msgid "Адрес пункта выдачи СДЭК для возврата посылок"
 msgstr "Сәлемдемелерді қайтару үшін СДЭК жеткізу пунктінің мекенжайы"
 
-#: template-parts/section/dogovor.php:190
+#: template-parts/section/dogovor.php:193
 msgid "Адрес регистрации"
 msgstr "Тіркеу мекенжайы"
 
-#: template-parts/section/dogovor.php:227
+#: template-parts/section/dogovor.php:230
 msgid "Адрес сайта"
 msgstr "Веб-сайт мекенжайы"
 
@@ -56,10 +76,14 @@ msgstr ""
 msgid "Анкета отправлена"
 msgstr "Сауалнама жіберілді"
 
-#: template-parts/section/dogovor.php:136
-#: template-parts/section/dogovor.php:216
+#: template-parts/section/dogovor.php:139
+#: template-parts/section/dogovor.php:219
 msgid "БИК банка"
 msgstr "БИК құмырасы"
+
+#: template-parts/section/dogovor.php:392
+msgid "БИН/ИИН"
+msgstr "БСН/ЖСН"
 
 #: template-parts/section/calc.php:88 template-parts/section/compare.php:18
 msgid "Без договора"
@@ -85,12 +109,13 @@ msgstr "14 күн тегін сақтау"
 msgid "Бесплатный осмотр вложения"
 msgstr "Тегін тіркемені тексеру"
 
-#: template-parts/section/dogovor.php:137
-#: template-parts/section/dogovor.php:217
+#: template-parts/section/dogovor.php:140
+#: template-parts/section/dogovor.php:220
 msgid "Введите БИК"
 msgstr "БИК енгізіңіз"
 
-#: template-parts/section/dogovor.php:99 template-parts/section/dogovor.php:191
+#: template-parts/section/dogovor.php:102
+#: template-parts/section/dogovor.php:194
 msgid "Введите адрес"
 msgstr "Мекенжайды енгізіңіз"
 
@@ -99,11 +124,11 @@ msgstr "Мекенжайды енгізіңіз"
 msgid "Введите ваше имя"
 msgstr "Сіздің атыңыз"
 
-#: template-parts/section/dogovor.php:243
+#: template-parts/section/dogovor.php:246
 msgid "Введите город"
 msgstr "Қаланы енгізіңіз"
 
-#: template-parts/section/dogovor.php:89
+#: template-parts/section/dogovor.php:92
 msgid "Введите название"
 msgstr "Атын енгізіңіз"
 
@@ -111,11 +136,11 @@ msgstr "Атын енгізіңіз"
 msgid "Введите название маркетплейса"
 msgstr "Базардың атын енгізіңіз"
 
-#: template-parts/section/dogovor.php:55 template-parts/section/dogovor.php:74
-#: template-parts/section/dogovor.php:93 template-parts/section/dogovor.php:127
-#: template-parts/section/dogovor.php:141
-#: template-parts/section/dogovor.php:165
-#: template-parts/section/dogovor.php:221
+#: template-parts/section/dogovor.php:58 template-parts/section/dogovor.php:77
+#: template-parts/section/dogovor.php:96 template-parts/section/dogovor.php:130
+#: template-parts/section/dogovor.php:144
+#: template-parts/section/dogovor.php:168
+#: template-parts/section/dogovor.php:224
 msgid "Введите номер"
 msgstr "Нөмірді енгізіңіз"
 
@@ -128,15 +153,15 @@ msgstr "Тапсырыс нөміріңізді енгізіңіз"
 msgid "Введите номер телефона"
 msgstr "Нөмірді енгізіңіз"
 
-#: template-parts/section/dogovor.php:176
+#: template-parts/section/dogovor.php:179
 msgid "Введите серию и номер паспорта"
 msgstr "Серия мен төлқұжат нөмірін енгізіңіз"
 
-#: template-parts/section/dogovor.php:228
+#: template-parts/section/dogovor.php:231
 msgid "Введите ссылку"
 msgstr "Сілтемені енгізіңіз"
 
-#: template-parts/section/calc.php:65
+#: template-parts/section/calc.php:65 template-parts/section/dogovor.php:467
 msgid "Вес, кг"
 msgstr "Салмағы, кг"
 
@@ -144,8 +169,12 @@ msgstr "Салмағы, кг"
 msgid "Вторая версия шаблона WordPress для i-cdek.ru"
 msgstr ""
 
-#: template-parts/section/dogovor.php:131
-#: template-parts/section/dogovor.php:180
+#: template-parts/section/dogovor.php:423
+msgid "Вы являетесь"
+msgstr "Сіз"
+
+#: template-parts/section/dogovor.php:134
+#: template-parts/section/dogovor.php:183
 msgid "Выберите дату"
 msgstr "Күнді таңдаңыз"
 
@@ -153,7 +182,7 @@ msgstr "Күнді таңдаңыз"
 msgid "Выберите маркетплейс"
 msgstr "Базарды таңдаңыз"
 
-#: template-parts/section/dogovor.php:262
+#: template-parts/section/dogovor.php:265
 msgid "Выберите пункт выдачи на карте"
 msgstr "Қабылдау пунктінің мекенжайын енгізіңіз"
 
@@ -161,7 +190,11 @@ msgstr "Қабылдау пунктінің мекенжайын енгізің�
 msgid "Габариты конверта"
 msgstr "Конверттің өлшемдері"
 
-#: template-parts/section/dogovor.php:242
+#: template-parts/section/dogovor.php:474
+msgid "Габариты, ДхШхВ в см"
+msgstr "Өлшемдері, см ДхШхВ"
+
+#: template-parts/section/dogovor.php:245
 msgid "Город"
 msgstr "Қала"
 
@@ -173,7 +206,7 @@ msgstr "Баратын қала"
 msgid "Город отправления"
 msgstr "Жөнелту қаласы"
 
-#: template-parts/section/dogovor.php:103
+#: template-parts/section/dogovor.php:106
 msgid "Город, улица, дом/офис"
 msgstr "Қала, көше, үй/кеңсе"
 
@@ -181,24 +214,28 @@ msgstr "Қала, көше, үй/кеңсе"
 msgid "Груз"
 msgstr "Жүк"
 
-#: template-parts/section/dogovor.php:203
+#: inc/template-parts.php:287
+msgid "Грузы"
+msgstr "Жүктер"
+
+#: template-parts/section/dogovor.php:206
 msgid "Да"
 msgstr "Иә"
 
-#: template-parts/section/dogovor.php:60 template-parts/section/dogovor.php:84
-#: template-parts/section/dogovor.php:87
+#: template-parts/section/dogovor.php:63 template-parts/section/dogovor.php:87
+#: template-parts/section/dogovor.php:90
 msgid "Данные"
 msgstr "Деректер"
 
-#: template-parts/section/dogovor.php:179
+#: template-parts/section/dogovor.php:182
 msgid "Дата выдачи паспорта"
 msgstr "Паспорттың берілген күні"
 
-#: template-parts/section/dogovor.php:130
+#: template-parts/section/dogovor.php:133
 msgid "Дата выдачи свидельства"
 msgstr "Сертификаттың берілген күні"
 
-#: template-parts/section/dogovor.php:67
+#: template-parts/section/dogovor.php:70
 msgid "Дата рождения"
 msgstr "Туған жылы"
 
@@ -208,7 +245,8 @@ msgid "Дашборд"
 msgstr "Бақылау тақтасы"
 
 #: template-parts/element/popup.php:50 template-parts/element/popup.php:81
-#: template-parts/element/popup.php:112 template-parts/section/dogovor.php:271
+#: template-parts/element/popup.php:112 template-parts/section/dogovor.php:274
+#: template-parts/section/dogovor.php:501
 msgid "Даю свое"
 msgstr "Мен өзімді беремін"
 
@@ -220,9 +258,17 @@ msgstr "Көбірек қосыңыз"
 msgid "Договор"
 msgstr "Шарт"
 
-#: template-parts/section/dogovor.php:20
+#: template-parts/section/dogovor.php:21
 msgid "Дождитесь обратного звонока менеджера"
 msgstr "Менеджердің қоңырауын күтіңіз"
+
+#: inc/template-parts.php:292
+msgid "Документы"
+msgstr "Құжаттар"
+
+#: template-parts/section/dogovor.php:307
+msgid "Доставка документов"
+msgstr "Құжаттарды жеткізу"
 
 #: template-parts/element/popup.php:40
 msgid "Другой"
@@ -236,24 +282,33 @@ msgstr "Шарт жасасу"
 msgid "Закрепленный менеджер"
 msgstr "Бекітілген менеджер"
 
-#: template-parts/section/dogovor.php:16
+#: template-parts/section/dogovor.php:17
 msgid "Заполните<br> и отправьте анкету"
 msgstr "Толтырыңыз<br> және сауалнама жіберіңіз"
+
+#: template-parts/section/dogovor.php:313
+msgid "Заявка"
+msgstr "Өтінім"
 
 #: template-parts/element/popup.php:16
 msgid "Заявка отправлена"
 msgstr "Өтінім жіберілді"
 
-#: template-parts/section/dogovor.php:51 template-parts/section/dogovor.php:54
-#: template-parts/section/dogovor.php:92
+#: template-parts/section/dogovor.php:54 template-parts/section/dogovor.php:57
+#: template-parts/section/dogovor.php:95
 msgid "ИНН"
 msgstr "СТН"
 
-#: template-parts/section/dogovor.php:251
+#: template-parts/section/dogovor.php:254
 msgid "Изменить"
 msgstr "Өзгерту"
 
-#: template-parts/section/dogovor.php:40
+#: template-parts/section/dogovor.php:331
+#: template-parts/section/dogovor.php:345
+msgid "Индекс, страна, город, улица, дом"
+msgstr "Индекс, ел, қала, көше, үй"
+
+#: template-parts/section/dogovor.php:43
 msgid "Индивидуальный предприниматель"
 msgstr "Жеке кәсіпкер"
 
@@ -261,21 +316,34 @@ msgstr "Жеке кәсіпкер"
 msgid "Интеграция с базой СДЭК по API-протоколу"
 msgstr "API-хаттама бойынша CDEK базасымен интеграциялау"
 
-#: template-parts/section/dogovor.php:197
+#: template-parts/section/dogovor.php:200
 msgid "Интернет-магазин"
 msgstr "Интернет-дүкен"
 
-#: template-parts/section/dogovor.php:260
+#: template-parts/section/dogovor.php:263
 msgid "Ищем пункты выдачи"
 msgstr "Шығару пункттерін іздеу"
 
-#: template-parts/section/dogovor.php:186
+#: template-parts/section/dogovor.php:456
+msgid "Какие документы необходимо доставить."
+msgstr "Қандай құжаттарды жеткізу керек."
+
+#: template-parts/section/dogovor.php:189
 msgid "Кем выдан паспорт"
 msgstr "Паспортты кім берді"
 
-#: template-parts/section/dogovor.php:233
+#: template-parts/section/dogovor.php:462
+msgid "Количество"
+msgstr "Саны"
+
+#: template-parts/section/dogovor.php:236
+#: template-parts/section/dogovor.php:481
 msgid "Комментарий"
 msgstr "Түсініктеме"
+
+#: template-parts/section/dogovor.php:417
+msgid "Контактные данные"
+msgstr "Байланыс деректері"
 
 #: template-parts/section/prices.php:75
 msgid "Коробка 60×40×40 см"
@@ -286,13 +354,21 @@ msgstr "60×40×40 см қорап"
 msgid "Куда"
 msgstr "Қайда"
 
-#: template-parts/section/dogovor.php:31
+#: template-parts/section/dogovor.php:34 template-parts/section/dogovor.php:293
 msgid "Лицо"
 msgstr "Бет"
 
 #: template-parts/section/compare.php:82
 msgid "Личный кабинет"
 msgstr "Жеке кабинет"
+
+#: template-parts/section/dogovor.php:400
+msgid ""
+"Максимально подробно: наименование, торговая марка, назначение, материал, "
+"технические характеристики."
+msgstr ""
+"Мүмкіндігінше егжей-тегжейлі: атауы, сауда маркасы, мақсаты, материалы, "
+"техникалық сипаттамалары."
 
 #: template-parts/section/prices.php:33
 msgid "Максимальный вес"
@@ -302,23 +378,27 @@ msgstr "Максималды салмақ"
 msgid "Мы изучим информацию и свяжемся с вами в ближайшее время"
 msgstr "Біз ақпаратты зерттейміз және жақын арада Сізбен байланысамыз"
 
+#: template-parts/section/dogovor.php:385
+msgid "Наименование компании"
+msgstr "Компанияның атауы"
+
 #: template-parts/section/compare.php:27
 msgid "Наложенный платёж"
 msgstr "Үстеме төлем"
 
-#: template-parts/section/dogovor.php:119
+#: template-parts/section/dogovor.php:122
 msgid "Не отличается"
 msgstr "Айырмашылығы жоқ"
 
-#: template-parts/section/dogovor.php:208
+#: template-parts/section/dogovor.php:211
 msgid "Нет"
 msgstr "Жоқ"
 
-#: template-parts/section/dogovor.php:126
+#: template-parts/section/dogovor.php:129
 msgid "Номер свидетельства"
 msgstr "Куәлік нөмірі"
 
-#: template-parts/section/dogovor.php:24
+#: template-parts/section/dogovor.php:25
 msgid "Обсудите условия и подпишите договор"
 msgstr "Шарттарды талқылаңыз және келісімшартқа қол қойыңыз"
 
@@ -326,9 +406,29 @@ msgstr "Шарттарды талқылаңыз және келісімшарт�
 msgid "Обсудить условия"
 msgstr "Терминдерді талқылаңыз"
 
-#: template-parts/section/dogovor.php:157
+#: template-parts/section/dogovor.php:455
+msgid "Описание отправления"
+msgstr "Жөнелту сипаттамасы"
+
+#: template-parts/section/dogovor.php:399
+msgid "Описание товара"
+msgstr "Тауардың сипаттамасы"
+
+#: template-parts/section/dogovor.php:482
+msgid ""
+"Опишите особенности вашего отправления. Или укажите направление, куда вам "
+"необходимо отправить документы, если оно не представлено выше."
+msgstr ""
+"Сіздің кету ерекшеліктеріңізді сипаттаңыз. Немесе жоғарыда көрсетілмеген "
+"болса, құжаттарды қайда жіберу керек екенін көрсетіңіз."
+
+#: template-parts/section/dogovor.php:160
 msgid "Основания действий директора"
 msgstr "Директордың әрекетінің себептері"
+
+#: inc/template-parts.php:249
+msgid "Оставить заявку"
+msgstr "Өтініш қалдыру"
 
 #: template-parts/element/popup.php:24 template-parts/element/popup.php:68
 #: template-parts/element/popup.php:99
@@ -341,16 +441,21 @@ msgstr ""
 msgid "Откуда"
 msgstr "Қайдан"
 
-#: template-parts/section/dogovor.php:114
+#: template-parts/section/dogovor.php:117
 msgid "Отличается"
 msgstr "Басқа"
+
+#: template-parts/section/dogovor.php:434
+msgid "Отправителем"
+msgstr "Жіберуші"
 
 #: template-parts/element/popup.php:54 template-parts/element/popup.php:85
 #: template-parts/element/popup.php:116
 msgid "Отправить"
 msgstr "Жіберу"
 
-#: template-parts/section/dogovor.php:275
+#: template-parts/section/dogovor.php:278
+#: template-parts/section/dogovor.php:505
 msgid "Отправить анкету"
 msgstr "Сауалнама жіберу"
 
@@ -366,7 +471,7 @@ msgstr "Тапсырысты қадағалау"
 msgid "Официальный сайт СДЭК"
 msgstr "СДЭК ресми сайты"
 
-#: template-parts/section/dogovor.php:83
+#: template-parts/section/dogovor.php:86
 msgid "Паспорт"
 msgstr "Төлқұжат"
 
@@ -375,13 +480,18 @@ msgid "Пожалуйста, заполните все обязательные 
 msgstr "Барлық қажетті өрістерді толтырыңыз"
 
 #: template-parts/element/popup.php:50 template-parts/element/popup.php:81
-#: template-parts/element/popup.php:112 template-parts/section/dogovor.php:271
+#: template-parts/element/popup.php:112 template-parts/section/dogovor.php:274
+#: template-parts/section/dogovor.php:501
 msgid "Политикой конфиденциальности"
 msgstr "құпиялылық саясаты"
 
 #: template-parts/element/tracking.php:5
 msgid "Получаем информацию"
 msgstr "Біз ақпарат аламыз"
+
+#: template-parts/section/dogovor.php:429
+msgid "Получателем"
+msgstr "Алушы"
 
 #: template-parts/element/popup.php:98
 msgid "Получить консультацию"
@@ -406,7 +516,7 @@ msgstr "Қабылдау"
 msgid "Промо"
 msgstr "Промо"
 
-#: template-parts/section/dogovor.php:249
+#: template-parts/section/dogovor.php:252
 msgid "Пункт выдачи не выбран"
 msgstr "Беру пункті таңдалмаған"
 
@@ -418,12 +528,16 @@ msgstr "Элемент өлшемдері, см"
 msgid "Рассчитайте стоимость доставки на маркетплейс"
 msgstr "Базарға жеткізу құнын есептеңіз"
 
+#: inc/template-parts.php:258
+msgid "Рассчитать стоимость"
+msgstr "Құнын есептеңіз"
+
 #: template-parts/section/calc.php:73
 msgid "Рассчитать стоимость доставки"
 msgstr "Жеткізу құнын есептеу"
 
-#: template-parts/section/dogovor.php:140
-#: template-parts/section/dogovor.php:220
+#: template-parts/section/dogovor.php:143
+#: template-parts/section/dogovor.php:223
 msgid "Расчетный счет"
 msgstr "Ағымдағы шот"
 
@@ -443,7 +557,7 @@ msgstr "Менеджер сізбен байланысады және барлы
 msgid "СМС-оповещение"
 msgstr "SMS-хабарлама"
 
-#: template-parts/section/dogovor.php:45
+#: template-parts/section/dogovor.php:48
 msgid "Самозанятый гражданин"
 msgstr "Өзін-өзі жұмыспен қамтыған азамат"
 
@@ -451,7 +565,7 @@ msgstr "Өзін-өзі жұмыспен қамтыған азамат"
 msgid "Сервисы"
 msgstr "Қызметтер"
 
-#: template-parts/section/dogovor.php:175
+#: template-parts/section/dogovor.php:178
 msgid "Серия и номер паспорта"
 msgstr "Серия және төлқұжат нөмірі"
 
@@ -463,6 +577,10 @@ msgstr "Маркетплейс қоймасы"
 msgid "Склад фулфилмента СДЭК"
 msgstr "СДЭК фулфилмент қоймасы"
 
+#: template-parts/section/dogovor.php:411
+msgid "Согласно заявленной в инвойсе"
+msgstr "Инвойста мәлімделгенге сәйкес"
+
 #: template-parts/section/prices.php:49
 msgid "Срок доставки"
 msgstr "Жеткізу мерзімі"
@@ -471,9 +589,21 @@ msgstr "Жеткізу мерзімі"
 msgid "Сроки доставки"
 msgstr "Жеткізу мерзімі"
 
-#: template-parts/section/calc.php:17
+#: template-parts/section/dogovor.php:406
+msgid "Ссылка на товар в интернете"
+msgstr "Интернеттегі элементке сілтеме"
+
+#: template-parts/section/calc.php:17 template-parts/section/dogovor.php:410
 msgid "Стоимость"
 msgstr "Құны"
+
+#: template-parts/section/dogovor.php:337
+msgid "Страна назначения"
+msgstr "Баратын ел"
+
+#: template-parts/section/dogovor.php:316
+msgid "Страна отправления"
+msgstr "Шығу елі"
 
 #: template-parts/section/compare.php:77 template-parts/section/prices.php:41
 msgid "Страхование"
@@ -487,11 +617,19 @@ msgstr "Біз жеткізуді қарастырамыз"
 msgid "Тариф «Посылка» от 950 ₸ за 3 кг"
 msgstr "\"Сәлемдеме\" тарифі 3 келі үшін 950 теңгеден бастап"
 
-#: template-parts/section/dogovor.php:73 template-parts/section/dogovor.php:164
+#: template-parts/section/dogovor.php:76 template-parts/section/dogovor.php:167
 msgid "Телефон"
 msgstr "Телефон"
 
-#: template-parts/section/dogovor.php:78 template-parts/section/dogovor.php:169
+#: template-parts/section/dogovor.php:381
+msgid "Телефон контактного лица"
+msgstr "Байланыс тұлғасының телефоны"
+
+#: template-parts/section/dogovor.php:442
+msgid "Тип доставки"
+msgstr "Жеткізу түрі"
+
+#: template-parts/section/dogovor.php:81 template-parts/section/dogovor.php:172
 msgid "Укажите e-mail"
 msgstr "Электрондық поштаны көрсетіңіз"
 
@@ -503,44 +641,58 @@ msgstr "Орау"
 msgid "Услуги"
 msgstr "Қызметтер"
 
-#: template-parts/section/dogovor.php:63
+#: template-parts/section/dogovor.php:66
 msgid "ФИО"
 msgstr "Толық аты-жөні"
 
-#: template-parts/section/dogovor.php:88
+#: template-parts/section/dogovor.php:91
 msgid "ФИО (индивидуального предпринимателя)"
 msgstr "Толық аты-жөні"
 
-#: template-parts/section/dogovor.php:150
+#: template-parts/section/dogovor.php:153
 msgid "ФИО директора"
 msgstr "Директордың аты-жөні"
 
-#: template-parts/section/dogovor.php:146
+#: template-parts/section/dogovor.php:149
 msgid "ФИО заполнителя анкеты"
 msgstr "Сауалнама толтырушының аты-жөні"
 
-#: template-parts/section/dogovor.php:102
+#: template-parts/section/dogovor.php:370
+msgid "ФИО контактного лица"
+msgstr "Байланыс тұлғасының аты-жөні"
+
+#: template-parts/section/dogovor.php:418
+msgid "ФИО, email, номер телефона"
+msgstr "Аты-жөні, email, телефон нөмірі"
+
+#: template-parts/section/dogovor.php:105
 msgid "Фактический адрес"
 msgstr "Нақты мекенжай"
 
-#: template-parts/section/dogovor.php:108
+#: template-parts/section/dogovor.php:111
 msgid "Фактический адрес отличается"
 msgstr "Нақты мекенжай басқа"
+
+#: template-parts/section/dogovor.php:351
+#: template-parts/section/dogovor.php:363
+msgid "Цель транспортировки"
+msgstr "Тасымалдау мақсаты"
 
 #: template-parts/section/promo.php:22
 msgid "Юлия свяжется с вами для обсуждения условий"
 msgstr "Юлия шарттарды талқылау үшін сізбен байланысады"
 
-#: template-parts/section/dogovor.php:98
+#: template-parts/section/dogovor.php:101
 msgid "Юридический адрес"
 msgstr "Заңды мекен-жайы"
 
-#: template-parts/section/dogovor.php:35
+#: template-parts/section/dogovor.php:38
 msgid "Юридическое лицо"
 msgstr "Заңды тұлға"
 
 #: template-parts/element/popup.php:50 template-parts/element/popup.php:81
-#: template-parts/element/popup.php:112 template-parts/section/dogovor.php:271
+#: template-parts/element/popup.php:112 template-parts/section/dogovor.php:274
+#: template-parts/section/dogovor.php:501
 msgid "в соответствии с"
 msgstr "сәйкес"
 
@@ -548,9 +700,9 @@ msgstr "сәйкес"
 msgid "добровольное на усмотрение отправителя"
 msgstr "жіберушінің қалауы бойынша ерікті"
 
-#: template-parts/section/dogovor.php:126
-#: template-parts/section/dogovor.php:130
-#: template-parts/section/dogovor.php:233
+#: template-parts/section/dogovor.php:129
+#: template-parts/section/dogovor.php:133
+#: template-parts/section/dogovor.php:236
 msgid "не обязательно"
 msgstr "міндетті емес"
 
@@ -559,7 +711,8 @@ msgid "от 1 дня"
 msgstr "1 күннен бастап"
 
 #: template-parts/element/popup.php:50 template-parts/element/popup.php:81
-#: template-parts/element/popup.php:112 template-parts/section/dogovor.php:271
+#: template-parts/element/popup.php:112 template-parts/section/dogovor.php:274
+#: template-parts/section/dogovor.php:501
 msgid "согласие на обработку персональный данных"
 msgstr "дербес деректерді өңдеуге келісім"
 

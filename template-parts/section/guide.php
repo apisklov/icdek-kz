@@ -10,7 +10,7 @@
                 </div>
             <?php endif; ?>
             <div class="section__content">
-                <div class="guide">
+                <div class="guide <?php echo esc_attr( $args['classes'] ) ?>">
                     <div class="guide__wrapper">
                         <div class="guide__content">
                             <div class="guide__list">

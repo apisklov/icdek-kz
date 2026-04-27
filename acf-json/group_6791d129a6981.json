@@ -56,7 +56,8 @@
                     },
                     "choices": {
                         "list": "Список",
-                        "carousel": "Карусель"
+                        "carousel": "Карусель",
+                        "b2b": "Коммерческие грузы"
                     },
                     "default_value": "",
                     "return_format": "value",
@@ -180,5 +181,8 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737708201
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1777118748
 }

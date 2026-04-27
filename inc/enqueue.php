@@ -53,6 +53,16 @@ function enqueue_theme_scripts()
     );
 
     wp_register_script(
+        'b2b',
+        get_template_directory_uri() . '/assets/js/b2b.min.js',
+        [ 'vue' ],
+        filemtime(get_theme_file_path('/assets/js/b2b.min.js')),
+        [
+            'in_footer' => true
+        ]
+    );
+
+    wp_register_script(
         'tracking',
         get_template_directory_uri() . '/assets/js/tracking.min.js',
         [ 'vue' ],

@@ -4,8 +4,8 @@ add_filter('nav_menu_item_id', '__return_empty_string');
 add_filter('nav_menu_css_class', 'nav_menu_class_item', 10, 3);
 add_filter('nav_menu_link_attributes', 'nav_menu_attr_link', 10, 4);
 add_filter('nav_menu_submenu_css_class', 'nav_menu_submenu_css_class', 10, 3);
-add_filter( 'body_class', 'add_body_classes', 10, 2 );
-add_filter( 'wp_get_attachment_image_attributes', 'set_add_attr_for_attachment_image', 10, 3 );
+add_filter('body_class', 'add_body_classes', 10, 2);
+add_filter('wp_get_attachment_image_attributes', 'set_add_attr_for_attachment_image', 10, 3);
 add_action('after_setup_theme', 'icdek_load_theme_textdomain');
 
 
@@ -41,12 +41,13 @@ function nav_menu_submenu_css_class($classes, $args, $depth)
     return $classes;
 }
 
-function add_body_classes( $classes, $class ) {
+function add_body_classes($classes, $class)
+{
     global $post;
 
     $classes = [];
 
-    if( is_forward() ) {
+    if (is_forward()) {
         $classes[] = 'page-forward';
     }
 
@@ -55,7 +56,7 @@ function add_body_classes( $classes, $class ) {
     return $classes;
 }
 
-add_action( 'phpmailer_init', 'set_envelope_from_wp_mail' );
+add_action('phpmailer_init', 'set_envelope_from_wp_mail');
 
 /**
  * Установка Sender для всех писем через wp_mail
@@ -64,8 +65,9 @@ add_action( 'phpmailer_init', 'set_envelope_from_wp_mail' );
  * @param  PHPMailer $phpmailer
  * @return void
  */
-function set_envelope_from_wp_mail( $phpmailer ) {
-	$phpmailer->Sender = 'info@i-cdek.ru';
+function set_envelope_from_wp_mail($phpmailer)
+{
+    $phpmailer->Sender = 'info@i-cdek.ru';
 }
 
 /**
@@ -76,52 +78,57 @@ function set_envelope_from_wp_mail( $phpmailer ) {
  * @param  mixed $size
  * @return void
  */
-function set_add_attr_for_attachment_image( $attr, $post, $size ) {
-    $title = get_the_title( $post );
+function set_add_attr_for_attachment_image($attr, $post, $size)
+{
+    $title = get_the_title($post);
 
-    if( $title ) {
+    if ($title) {
         $attr['title'] = $title;
     }
 
     return $attr;
 }
 
-add_filter( 'wpseo_title', function( $title, $presentation ) {
+add_filter('wpseo_title', function ($title, $presentation) {
     global $post;
 
-    $title_yoast = get_post_meta( $post->ID, '_yoast_wpseo_title', true );
+    if ($post) {
+        $title_yoast = get_post_meta($post->ID, '_yoast_wpseo_title', true);
 
-    if( $title_yoast ) {
-        return $title_yoast;
+        if ($title_yoast) {
+            return $title_yoast;
+        }
     }
 
     return $title;
-}, 10, 2 );
+}, 10, 2);
 
-add_filter( 'wpseo_metadesc', function( $desc ) {
+add_filter('wpseo_metadesc', function ($desc) {
     global $post;
 
-    $desc_yoast = get_post_meta( $post->ID, '_yoast_wpseo_metadesc', true );
+    if ($post) {
+        $desc_yoast = get_post_meta($post->ID, '_yoast_wpseo_metadesc', true);
 
-    if( $desc_yoast ) {
-        return $desc_yoast;
+        if ($desc_yoast) {
+            return $desc_yoast;
+        }
     }
-    
+
     return $desc;
-}, 10, 2 );
+}, 10, 2);
 
-add_filter( 'dogovor_link', function( $link ) {
+add_filter('dogovor_link', function ($link) {
 
-    if( function_exists( 'pll_current_language' ) ) {
+    if (function_exists('pll_current_language')) {
         $lang = pll_current_language();
-        
-        if( $lang == 'kk' ) {
-            return home_url( 'kk/contract' );
+
+        if ($lang == 'kk') {
+            return home_url('kk/contract');
         }
     }
 
     return $link;
-} );
+});
 
 /**
  * Локализация шаблона

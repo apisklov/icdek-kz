@@ -12,9 +12,12 @@
             <div class="section__content">
                 <div class="marketplace-scheme">
                     <div class="marketplace-scheme__wrapper">
-                        <div class="marketplace-scheme__list columns-<?php echo count( $args['list'] ) ?>">
+                        <div class="marketplace-scheme__list columns-<?php echo count($args['list']) ?>">
                             <?php foreach ($args['list'] as $item) : ?>
                                 <div class="marketplace-scheme__item">
+                                    <?php if ($item['label']) : ?>
+                                        <div class="marketplace-scheme__label"><?php echo $item['label'] ?></div>
+                                    <?php endif; ?>
                                     <?php if (! empty($item['types'])) : ?>
                                         <div class="marketplace-scheme__types">
                                             <?php foreach ($item['types'] as $type) : ?>
@@ -24,7 +27,7 @@
                                     <?php endif; ?>
                                     <?php if (! empty($item['icon'])) : ?>
                                         <div class="marketplace-scheme__icon"><?php echo wp_get_attachment_image($item['icon'], 'full') ?></div>
-                                        <?php endif; ?>
+                                    <?php endif; ?>
                                     <div class="marketplace-scheme__name"><?php echo esc_html($item['title']) ?></div>
                                     <div class="marketplace-scheme__text"><?php echo esc_html($item['text']) ?></div>
                                     <?php if (! empty($item['services'])) : ?>

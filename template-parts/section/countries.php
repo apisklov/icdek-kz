@@ -22,6 +22,22 @@
                                 <?php endforeach; ?>
                                 <div class="countries__more">Показать все</div>
                             </div>
+                        <?php elseif ($args['view'] == 'b2b') : ?>
+                            <?php foreach ($args['sections'] as $section) : ?>
+                                <div class="countries__section">
+                                    <div class="countries__section-title"><?php echo $section['title'] ?></div>
+                                    <div class="countries__section-list">
+                                        <?php foreach ($section['list'] as $country) : ?>
+                                            <div class="countries__item">
+                                                <div class="countries__flag">
+                                                    <?php echo wp_get_attachment_image($country['flag'], 'full') ?>
+                                                </div>
+                                                <div class="countries__name"><?php echo $country['title'] ?></div>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
                         <?php else : ?>
                             <div class="countries__carousel">
                                 <?php foreach ($args['list'] as $chunk) : ?>

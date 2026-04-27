@@ -60,14 +60,16 @@ function output_element_lang()
         $args['list'] = pll_languages_list();
     }
 
-    $args['list'] = array_map(function ($locale) use ($post) {
-        $post_id = $post->ID;
-        $translated_id = pll_get_post($post_id, $locale);
-        return [
-            'locale' => $locale,
-            'link' => get_the_permalink($translated_id)
-        ];
-    }, pll_languages_list());
+    if( $post ) {
+        $args['list'] = array_map(function ($locale) use ($post) {
+            $post_id = $post->ID;
+            $translated_id = pll_get_post($post_id, $locale);
+            return [
+                'locale' => $locale,
+                'link' => get_the_permalink($translated_id)
+            ];
+        }, pll_languages_list());
+    }
 
     get_template_part('template-parts/element/lang', null, $args);
 }
@@ -130,7 +132,17 @@ function output_section_about($args = [])
 
 function output_section_dogovor($args = [])
 {
-    wp_enqueue_script('dogovor');
+    $default = [
+        'form' => 'dogovor'
+    ];
+
+    $args = wp_parse_args( $args, $default );
+
+    if (is_page(['b2b-delivery', 'dostavka-kommercheskih-gruzov'])) {
+        $args['form'] = 'b2b';
+    }
+
+    wp_enqueue_script($args['form']);
     get_template_part('template-parts/section/dogovor', null, $args);
 }
 
@@ -184,6 +196,16 @@ function output_section_marketplace($args = [])
 
 function output_section_guide($args = [])
 {
+    $default = [
+        'classes' => 'guide--counter'
+    ];
+
+    $args = wp_parse_args($args, $default);
+
+    if (is_page(['b2b-delivery', 'dostavka-kommercheskih-gruzov'])) {
+        $args['classes'] = 'guide--list';
+    }
+
     get_template_part('template-parts/section/guide', null, $args);
 }
 
@@ -221,11 +243,19 @@ function output_section_marketplace_scheme($args = [])
     ];
     $args = wp_parse_args($args, $default);
 
+    if (is_page(['b2b-delivery', 'dostavka-kommercheskih-gruzov'])) {
+        $args['button'] = [
+            'action' => 'scroll',
+            'text' => __( 'Оставить заявку', 'icdek' ),
+            'scroll' => '#dogovor'
+        ];
+    }
+
 
     if (is_page('express-dostavka')) {
         $args['button'] = [
             'action' => 'scroll',
-            'text' => 'Рассчитать стоимость',
+            'text' => __( 'Рассчитать стоимость', 'icdek' ),
             'scroll' => '.section--calc'
         ];
     }
@@ -248,6 +278,20 @@ function output_section_countries($args = [])
     if ($args['view'] == 'carousel') {
         $length_part = ceil(count($args['list']) / 2);
         $args['list'] = array_chunk($args['list'], $length_part);
+    }
+
+    if ($args['view'] == 'b2b') {
+        $args['sections'] = [];
+
+        $args['sections'][] = [
+            'title' => __( 'Грузы', 'icdek' ),
+            'list' =>  array_splice($args['list'], 0, 8)
+        ];
+
+        $args['sections'][] = [
+            'title' => __( 'Документы', 'icdek' ),
+            'list' =>  array_splice($args['list'], 0, 20)
+        ];
     }
     get_template_part('template-parts/section/countries', null, $args);
 }
