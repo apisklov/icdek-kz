@@ -9,6 +9,7 @@ if (wp_doing_ajax()) {
         $from = json_decode(wp_unslash($_POST['from']), true);
         $to = json_decode(wp_unslash($_POST['to']), true);
         $packages = json_decode(wp_unslash($_POST['packages']));
+        $locale = $_POST['lang'];
 
         $from_id =  get_cdek_city_id($from);
         $to_id = get_cdek_city_id($to);
@@ -31,6 +32,10 @@ if (wp_doing_ajax()) {
                 'currency' => 1,
                 'packages' => $packages
             ];
+
+            if( $locale == 'kk' ) {
+                $data['currency'] = 2;
+            }
 
             $response = wp_remote_post(
                 'https://api.cdek.ru/v2/calculator/tarifflist',

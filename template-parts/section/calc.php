@@ -31,6 +31,7 @@
                 <div class="calc" id="calc">
                     <div class="calc__wrapper">
                         <form class="calc__form" ref="form" @submit.prevent>
+                            <input type="hidden" name="lang" value="<?php echo pll_current_language() ?>">
                             <div class="calc__loader" v-if="loader">
                                 <div class="spinner"></div>
                                 <div class="calc__loader-text"><?php esc_html_e('Считаем доставку', 'icdek') ?>...</div>
@@ -92,8 +93,8 @@
                                 </div>
                                 <div class="calc__row" v-for="tarif in result">
                                     <div class="calc__col">{{ tarif.tariff_name }}</div>
-                                    <div class="calc__col">{{ priceWithoutSale(tarif.delivery_sum) }} руб</div>
-                                    <div class="calc__col">{{ formatPrice(tarif.delivery_sum) }} руб</div>
+                                    <div class="calc__col">{{ priceWithoutSale(tarif.delivery_sum) }} <?php echo ( pll_current_language() == 'kk' ) ? '₸' : ' руб' ?></div>
+                                    <div class="calc__col">{{ formatPrice(tarif.delivery_sum) }} <?php echo ( pll_current_language() == 'kk' ) ? '₸' : ' руб' ?></div>
                                 </div>
                             </div>
                         </div>
