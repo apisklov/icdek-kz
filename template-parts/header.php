@@ -50,7 +50,7 @@
                         <a href="<?php echo home_url() ?>"><?php get_svg('/images/logo.svg') ?></a>
                     <?php endif; ?>
                     <div class="header__lang">
-                        <?php do_action( 'element/lang' ) ?>
+                        <?php do_action('element/lang') ?>
                     </div>
                 </div>
                 <div class="header__nav">
@@ -69,27 +69,26 @@
                             ); ?>
                         </nav>
                 </div>
-                <?php if (! is_forward()) : ?>
-                    <div class="header__contacts">
+                <div class="header__contacts">
+                    <div class="header__telephone">
                         <a href="tel:<?php echo get_setting('phone') ?>" class="header__phone"><?php echo get_setting('phone') ?></a>
-                        <div class="header__messengers">
-                            <?php do_action('element/messengers') ?>
-                        </div>
+                        <div class="header__telephone-info"><?php echo __('для юр. лиц, ИП и самозанятых', 'icdek') ?></div>
                     </div>
-                <?php endif; ?>
+                    <div class="header__messengers">
+                        <?php do_action('element/messengers') ?>
+                    </div>
+                </div>
                 <div class="header__button">
                     <?php do_action('element/button', [
                             'text' => esc_html('Заключить договор', 'icdek'),
                             'action' => 'link',
-                            'link' => apply_filters( 'dogovor_link', home_url('/dogovor/') ),
+                            'link' => apply_filters('dogovor_link', home_url('/dogovor/')),
                             'classes' => 'button--small'
                         ]) ?>
                 </div>
-                <?php if (! is_forward()) : ?>
-                    <a href="tel:<?php echo get_setting('phone') ?>" class="header__call">
-                        <?php get_svg('/icons/phone.svg') ?>
-                    </a>
-                <?php endif; ?>
+                <a href="tel:<?php echo get_setting('phone') ?>" class="header__call">
+                    <?php get_svg('/icons/phone.svg') ?>
+                </a>
             <?php endif; ?>
             <div class="header__burger">
                 <div class="burger">

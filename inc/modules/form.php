@@ -10,7 +10,7 @@ if (wp_doing_ajax()) {
             wp_send_json_error();
         }
 
-        $crm_url = get_url_crm('form/');
+        $crm_url = get_url_crm('form/kz.php');
         $crm_data = $_POST;
         $crm_note = '';
         $subject = (! empty( $_POST['subject'] )) ? $_POST['subject'] : 'Заявка с сайта i-cdek.ru';

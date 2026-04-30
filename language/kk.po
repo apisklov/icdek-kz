@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ICDEK\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-19 14:11+0000\n"
-"PO-Revision-Date: 2026-04-27 15:37+0000\n"
+"PO-Revision-Date: 2026-04-30 09:10+0000\n"
 "Last-Translator: \n"
 "Language-Team: Kazakh\n"
 "Language: kk\n"
@@ -85,7 +85,7 @@ msgstr "БИК құмырасы"
 msgid "БИН/ИИН"
 msgstr "БСН/ЖСН"
 
-#: template-parts/section/calc.php:88 template-parts/section/compare.php:18
+#: template-parts/section/calc.php:89 template-parts/section/compare.php:18
 msgid "Без договора"
 msgstr "Шарт жоқ"
 
@@ -161,7 +161,7 @@ msgstr "Серия мен төлқұжат нөмірін енгізіңіз"
 msgid "Введите ссылку"
 msgstr "Сілтемені енгізіңіз"
 
-#: template-parts/section/calc.php:65 template-parts/section/dogovor.php:467
+#: template-parts/section/calc.php:66 template-parts/section/dogovor.php:467
 msgid "Вес, кг"
 msgstr "Салмағы, кг"
 
@@ -198,11 +198,11 @@ msgstr "Өлшемдері, см ДхШхВ"
 msgid "Город"
 msgstr "Қала"
 
-#: template-parts/section/calc.php:48
+#: template-parts/section/calc.php:49
 msgid "Город назначения"
 msgstr "Баратын қала"
 
-#: template-parts/section/calc.php:42
+#: template-parts/section/calc.php:43
 msgid "Город отправления"
 msgstr "Жөнелту қаласы"
 
@@ -250,7 +250,7 @@ msgstr "Бақылау тақтасы"
 msgid "Даю свое"
 msgstr "Мен өзімді беремін"
 
-#: template-parts/section/calc.php:69
+#: template-parts/section/calc.php:70
 msgid "Добавить еще"
 msgstr "Көбірек қосыңыз"
 
@@ -349,7 +349,7 @@ msgstr "Байланыс деректері"
 msgid "Коробка 60×40×40 см"
 msgstr "60×40×40 см қорап"
 
-#: template-parts/section/calc.php:16 template-parts/section/calc.php:47
+#: template-parts/section/calc.php:16 template-parts/section/calc.php:48
 #: template-parts/section/prices.php:70
 msgid "Куда"
 msgstr "Қайда"
@@ -402,7 +402,7 @@ msgstr "Куәлік нөмірі"
 msgid "Обсудите условия и подпишите договор"
 msgstr "Шарттарды талқылаңыз және келісімшартқа қол қойыңыз"
 
-#: template-parts/element/popup.php:67 template-parts/section/calc.php:102
+#: template-parts/element/popup.php:67 template-parts/section/calc.php:103
 msgid "Обсудить условия"
 msgstr "Терминдерді талқылаңыз"
 
@@ -436,7 +436,7 @@ msgid "Оставьте заявку, и наши менеджеры свяжу
 msgstr ""
 "Өтінім қалдырыңыз, біздің менеджерлер сізбен 15 минут ішінде хабарласады"
 
-#: template-parts/section/calc.php:15 template-parts/section/calc.php:41
+#: template-parts/section/calc.php:15 template-parts/section/calc.php:42
 #: template-parts/section/prices.php:66
 msgid "Откуда"
 msgstr "Қайдан"
@@ -524,7 +524,7 @@ msgstr "Промо"
 msgid "Пункт выдачи не выбран"
 msgstr "Беру пункті таңдалмаған"
 
-#: template-parts/section/calc.php:55
+#: template-parts/section/calc.php:56
 msgid "Размеры отправления, см"
 msgstr "Элемент өлшемдері, см"
 
@@ -536,7 +536,7 @@ msgstr "Базарға жеткізу құнын есептеңіз"
 msgid "Рассчитать стоимость"
 msgstr "Құнын есептеңіз"
 
-#: template-parts/section/calc.php:73
+#: template-parts/section/calc.php:74
 msgid "Рассчитать стоимость доставки"
 msgstr "Жеткізу құнын есептеу"
 
@@ -545,11 +545,11 @@ msgstr "Жеткізу құнын есептеу"
 msgid "Расчетный счет"
 msgstr "Ағымдағы шот"
 
-#: template-parts/section/calc.php:73
+#: template-parts/section/calc.php:74
 msgid "Расчитать доставку"
 msgstr "Құнды есептеңіз"
 
-#: template-parts/section/calc.php:90 template-parts/section/compare.php:19
+#: template-parts/section/calc.php:91 template-parts/section/compare.php:19
 msgid "С договором"
 msgstr "Шартпен"
 
@@ -613,7 +613,7 @@ msgstr "Шығу елі"
 msgid "Страхование"
 msgstr "Сақтандыру"
 
-#: template-parts/section/calc.php:36
+#: template-parts/section/calc.php:37
 msgid "Считаем доставку"
 msgstr "Біз жеткізуді қарастырамыз"
 
@@ -699,6 +699,10 @@ msgstr "Заңды тұлға"
 #: template-parts/section/dogovor.php:501
 msgid "в соответствии с"
 msgstr "сәйкес"
+
+#: template-parts/footer.php:80 template-parts/header.php:75
+msgid "для юр. лиц, ИП и самозанятых"
+msgstr "Заң үшін. жеке тұлғалар, ЖК және  жұмыспен қамтығандар"
 
 #: template-parts/section/prices.php:42
 msgid "добровольное на усмотрение отправителя"

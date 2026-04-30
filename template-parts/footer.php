@@ -6,7 +6,7 @@
                 <div class="footer__logo"><?php get_svg('/images/logo.svg') ?></div>
                 <div class="footer__cdek"><a href="https://cdek.ru" target="_blank"><?php esc_html_e('Официальный сайт СДЭК', 'icdek') ?></a></div>
                 <div class="footer__privacy">
-                    <a href="<?php echo get_privacy_policy_url() ?>"><?php echo __( 'Политика конфиденциальности', 'icdek' ) ?></a>
+                    <a href="<?php echo get_privacy_policy_url() ?>"><?php echo __('Политика конфиденциальности', 'icdek') ?></a>
                 </div>
             </div>
             <div class="footer__column">
@@ -75,7 +75,10 @@
                         <div class="footer__messengers">
                             <?php do_action('element/messengers') ?>
                         </div>
-                        <a href="tel:<?php echo get_setting('phone') ?>" class="footer__phone"><?php echo get_setting('phone') ?></a>
+                        <div class="footer__telephone">
+                            <a href="tel:<?php echo get_setting('phone') ?>" class="footer__phone"><?php echo get_setting('phone') ?></a>
+                            <div class="footer__telephone-info"><?php echo __('для юр. лиц, ИП и самозанятых', 'icdek') ?></div>
+                        </div>
                     </div>
                     <div class="footer__address"><?php echo get_setting('address') ?></div>
                     <a href="mailto:<?php echo get_setting('email') ?>" class="footer__email"><?php echo get_setting('email') ?></a>
@@ -84,7 +87,7 @@
                     <?php do_action('element/button', [
                         'text' => esc_html('Заключить договор', 'icdek'),
                         'action' => 'link',
-                        'link' => apply_filters( 'dogovor_link', home_url('/dogovor/') ),
+                        'link' => apply_filters('dogovor_link', home_url('/dogovor/')),
                         'classes' => 'button--small'
                     ]) ?>
                 </div>

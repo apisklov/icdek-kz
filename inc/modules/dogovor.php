@@ -65,7 +65,7 @@ if (wp_doing_ajax()) {
             wp_send_json_error();
         }
 
-        $crm_url = get_url_crm('dogovor/');
+        $crm_url = get_url_crm('dogovor/kz.php');
         $crm_data = $_POST;
         $lead_data = $_POST;
         $crm_data['note'] = '';
