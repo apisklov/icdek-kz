@@ -44,11 +44,14 @@
         <div class="container">
             <div class="header__wrapper">
                 <div class="header__logo">
-                    <?php if (is_front_page()) : ?>
-                        <?php get_svg('/images/logo.svg') ?>
-                    <?php else : ?>
-                        <a href="<?php echo home_url() ?>"><?php get_svg('/images/logo.svg') ?></a>
-                    <?php endif; ?>
+                    <div class="header__logo-wrap">
+                        <?php if (is_front_page()) : ?>
+                            <?php get_svg('/images/logo.svg') ?>
+                        <?php else : ?>
+                            <a href="<?php echo home_url() ?>"><?php get_svg('/images/logo.svg') ?></a>
+                        <?php endif; ?>
+                        <div class="header__logo-label"><?php echo __( 'для бизнеса', 'icdek' ) ?></div>
+                    </div>
                     <div class="header__lang">
                         <?php do_action('element/lang') ?>
                     </div>

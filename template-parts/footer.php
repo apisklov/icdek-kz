@@ -3,7 +3,12 @@
     <div class="container">
         <div class="footer__wrapper">
             <div class="footer__company">
-                <div class="footer__logo"><?php get_svg('/images/logo.svg') ?></div>
+                <div class="footer__logo">
+                    <div class="footer__logo-wrap">
+                        <?php get_svg('/images/logo.svg') ?>
+                        <div class="footer__logo-label"><?php echo __('для бизнеса', 'icdek') ?></div>
+                    </div>
+                </div>
                 <div class="footer__cdek"><a href="https://cdek.ru" target="_blank"><?php esc_html_e('Официальный сайт СДЭК', 'icdek') ?></a></div>
                 <div class="footer__privacy">
                     <a href="<?php echo get_privacy_policy_url() ?>"><?php echo __('Политика конфиденциальности', 'icdek') ?></a>
