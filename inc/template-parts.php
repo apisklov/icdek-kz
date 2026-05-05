@@ -45,15 +45,25 @@ function output_element_messengers($args = [])
 function output_element_lang()
 {
     global $post;
+    $post_id = $post->ID;
 
     $args = [
         'active' => 'ru',
+        'link' => '',
         'list' => []
     ];
 
     if (function_exists('pll_current_language')) {
         $current = pll_current_language();
-        $args['active'] = $current;
+
+        if( $current == 'kk' ) {
+            $args['active'] = 'ru';
+        } else {
+            $args['active'] = 'kk';
+        }
+
+        $translated_id = pll_get_post($post_id, $args['active']);
+        $args['link'] = get_the_permalink( $translated_id );
     }
 
     if (function_exists('pll_languages_list')) {
