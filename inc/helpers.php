@@ -195,7 +195,7 @@ function send_data($url, $data)
 function get_headers_mail()
 {
     $headers  = "Content-type: text/html; charset=utf-8 \r\n";
-    $headers .= "From: СДЭК <no-reply@i-cdek.k\>\r\n";
+    $headers .= "From: СДЭК <no-reply@i-cdek.kz>\r\n";
     $headers .= "Reply-To: no-reply@i-cdek.kz\r\n";
 
     return $headers;
