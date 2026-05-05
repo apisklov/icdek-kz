@@ -123,7 +123,9 @@ add_filter('dogovor_link', function ($link) {
         $lang = pll_current_language();
 
         if ($lang == 'kk') {
-            return home_url('kk/contract');
+            return home_url('kk/contract/');
+        } else if( $lang == 'ru' ) {
+            return home_url('kk/zaklyuchit-dogovor/');
         }
     }
 

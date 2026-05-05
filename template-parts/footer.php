@@ -92,7 +92,7 @@
                     <?php do_action('element/button', [
                         'text' => esc_html('Заключить договор', 'icdek'),
                         'action' => 'link',
-                        'link' => apply_filters('dogovor_link', home_url('/dogovor/')),
+                        'link' => apply_filters('dogovor_link', home_url('/zaklyuchit-dogovor/')),
                         'classes' => 'button--small'
                     ]) ?>
                 </div>
