@@ -139,3 +139,7 @@ function icdek_load_theme_textdomain()
 {
     load_theme_textdomain('icdek', get_template_directory() . '/language');
 }
+
+add_action('wp_mail_failed', function($wp_error) {
+    error_log('WP_MAIL FAILED: ' . $wp_error->get_error_message());
+});
