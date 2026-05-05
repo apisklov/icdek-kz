@@ -7,6 +7,7 @@ add_filter('nav_menu_submenu_css_class', 'nav_menu_submenu_css_class', 10, 3);
 add_filter('body_class', 'add_body_classes', 10, 2);
 add_filter('wp_get_attachment_image_attributes', 'set_add_attr_for_attachment_image', 10, 3);
 add_action('after_setup_theme', 'icdek_load_theme_textdomain');
+add_action('phpmailer_init', 'setup_smtp_mailer');
 
 
 function nav_menu_class_item($classes, $item, $args)
@@ -143,3 +144,23 @@ function icdek_load_theme_textdomain()
 add_action('wp_mail_failed', function($wp_error) {
     error_log('WP_MAIL FAILED: ' . $wp_error->get_error_message());
 });
+
+/**
+ * Устанавливает настрйоки для SMTP
+ *
+ * @param  mixed $phpmailer
+ * @return void
+ */
+function setup_smtp_mailer($phpmailer) {
+    $phpmailer->isSMTP();
+    $phpmailer->Host = 'smtp.yandex.ru';
+    $phpmailer->SMTPAuth = true;
+    $phpmailer->Port = 465;
+    $phpmailer->Username = 'info@i-cdek.kz';
+    $phpmailer->Password = 'pwlkrfhucwcmawvr';
+    $phpmailer->SMTPSecure = 'tls';
+    $phpmailer->isHTML( true );
+
+    $phpmailer->From = 'info@i-cdek.kz';
+    $phpmailer->FromName = 'i-cdek';
+}
