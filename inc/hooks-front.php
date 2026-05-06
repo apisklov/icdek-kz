@@ -68,7 +68,7 @@ add_action('phpmailer_init', 'set_envelope_from_wp_mail');
  */
 function set_envelope_from_wp_mail($phpmailer)
 {
-    $phpmailer->Sender = 'info@i-cdek.ru';
+    $phpmailer->Sender = 'info@i-cdek.kz';
 }
 
 /**
