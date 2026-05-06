@@ -7,7 +7,7 @@ add_filter('nav_menu_submenu_css_class', 'nav_menu_submenu_css_class', 10, 3);
 add_filter('body_class', 'add_body_classes', 10, 2);
 add_filter('wp_get_attachment_image_attributes', 'set_add_attr_for_attachment_image', 10, 3);
 add_action('after_setup_theme', 'icdek_load_theme_textdomain');
-add_action('phpmailer_init', 'setup_smtp_mailer');
+// add_action('phpmailer_init', 'setup_smtp_mailer');
 
 
 function nav_menu_class_item($classes, $item, $args)
