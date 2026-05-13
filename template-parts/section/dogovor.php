@@ -51,10 +51,10 @@
                                     </div>
                                     <div class="dogovor__content">
                                         <div class="dogovor__section" v-if="isSelf">
-                                            <div class="dogovor__subtitle"><?php echo __('ИНН', 'icdek') ?></div>
+                                            <div class="dogovor__subtitle"><?php echo __('БИН', 'icdek') ?></div>
                                             <div class="dogovor__row">
                                                 <div class="field">
-                                                    <div class="field__label"><?php echo __('ИНН', 'icdek') ?></div>
+                                                    <div class="field__label"><?php echo __('БИН', 'icdek') ?></div>
                                                     <input type="text" name="inn" class="field__input" placeholder="<?php echo __('Введите номер', 'icdek') ?>" data-required>
                                                 </div>
                                             </div>
@@ -92,7 +92,7 @@
                                                     <input type="text" name="name" class="field__input" placeholder="<?php echo __('Введите название', 'icdek') ?>" data-required>
                                                 </div>
                                                 <div class="field">
-                                                    <div class="field__label"><?php echo __('ИНН', 'icdek') ?></div>
+                                                    <div class="field__label"><?php echo __('БИН', 'icdek') ?></div>
                                                     <input type="text" name="inn" class="field__input" placeholder="<?php echo __('Введите номер', 'icdek') ?>" data-required>
                                                 </div>
                                             </div>
