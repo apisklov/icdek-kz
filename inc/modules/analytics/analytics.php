@@ -249,7 +249,7 @@ function ajax_load_metrika_chats()
     $tmp_path = $_FILES['file']['tmp_name'];
 
     $oauth_token = 'y0__xDDvb4oGPayPyDNsubtFvEssHjR_nHc2zryCVpQoaxzEd3C';
-    $counter_id = 88056793;
+    $counter_id = 100407972;
 
     $endpoint = "https://api-metrika.yandex.net/management/v1/counter/{$counter_id}/offline_conversions/upload?type=CHATS&comment=October%20batch";
 

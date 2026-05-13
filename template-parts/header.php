@@ -19,7 +19,7 @@
         })
         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-        ym(88056793, "init", {
+        ym(100407972, "init", {
             clickmap: true,
             trackLinks: true,
             accurateTrackBounce: true,
@@ -34,7 +34,7 @@
     </script>
     <noscript>
         <div>
-            <img src="https://mc.yandex.ru/watch/88056793" style="position:absolute; left:-9999px;" alt="Счетчик Метрики" title="Метрика" />
+            <img src="https://mc.yandex.ru/watch/100407972" style="position:absolute; left:-9999px;" alt="Счетчик Метрики" title="Метрика" />
             <img src="https://mc.yandex.ru/watch/95211048" style="position:absolute; left:-9999px;" alt="Счетчик Метрики" title="Метрика" />
         </div>
     </noscript>

@@ -35,8 +35,8 @@
                 <select name="marketplace" class="field__select">
                     <option value="Wilbberries">Wilbberries</option>
                     <option value="Ozon">Ozon</option>
-                    <option value="Яндекс Маркет">Яндекс Маркет</option>
-                    <option value="Мегамаркет">Мегамаркет</option>
+                    <option value="Kaspi">Kaspi</option>
+                    <option value="Flip">Flip</option>
                     <option value="Другой"><?php echo __( 'Другой', 'icdek' ) ?></option>
                 </select>
             </div>

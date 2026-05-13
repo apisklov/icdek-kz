@@ -18,7 +18,7 @@
                                 </div>
                                 <div class="dogovor__step">
                                     <div class="dogovor__step-figure">2</div>
-                                    <div class="dogovor__step-text"><?php echo __('Дождитесь обратного звонока менеджера', 'icdek') ?></div>
+                                    <div class="dogovor__step-text"><?php echo __('Дождитесь обратного звонка менеджера', 'icdek') ?></div>
                                 </div>
                                 <div class="dogovor__step">
                                     <div class="dogovor__step-figure">3</div>
