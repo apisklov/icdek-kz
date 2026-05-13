@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ICDEK\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-19 14:11+0000\n"
-"PO-Revision-Date: 2026-05-04 05:14+0000\n"
+"PO-Revision-Date: 2026-05-13 16:43+0000\n"
 "Last-Translator: \n"
 "Language-Team: Kazakh\n"
 "Language: kk\n"
@@ -80,6 +80,13 @@ msgstr "Сауалнама жіберілді"
 #: template-parts/section/dogovor.php:219
 msgid "БИК банка"
 msgstr "БИК құмырасы"
+
+#: template-parts/section/dogovor.php:54 template-parts/section/dogovor.php:57
+#: template-parts/section/dogovor.php:95
+#, fuzzy
+#| msgid "ИНН"
+msgid "БИН"
+msgstr "СТН"
 
 #: template-parts/section/dogovor.php:392
 msgid "БИН/ИИН"
@@ -214,7 +221,7 @@ msgstr "Қала, көше, үй/кеңсе"
 msgid "Груз"
 msgstr "Жүк"
 
-#: inc/template-parts.php:287
+#: inc/template-parts.php:297
 msgid "Грузы"
 msgstr "Жүктер"
 
@@ -259,10 +266,12 @@ msgid "Договор"
 msgstr "Шарт"
 
 #: template-parts/section/dogovor.php:21
-msgid "Дождитесь обратного звонока менеджера"
+#, fuzzy
+#| msgid "Дождитесь обратного звонока менеджера"
+msgid "Дождитесь обратного звонка менеджера"
 msgstr "Менеджердің қоңырауын күтіңіз"
 
-#: inc/template-parts.php:292
+#: inc/template-parts.php:302
 msgid "Документы"
 msgstr "Құжаттар"
 
@@ -293,11 +302,6 @@ msgstr "Өтінім"
 #: template-parts/element/popup.php:16
 msgid "Заявка отправлена"
 msgstr "Өтінім жіберілді"
-
-#: template-parts/section/dogovor.php:54 template-parts/section/dogovor.php:57
-#: template-parts/section/dogovor.php:95
-msgid "ИНН"
-msgstr "СТН"
 
 #: template-parts/section/dogovor.php:254
 msgid "Изменить"
@@ -426,7 +430,7 @@ msgstr ""
 msgid "Основания действий директора"
 msgstr "Директордың әрекетінің себептері"
 
-#: inc/template-parts.php:249
+#: inc/template-parts.php:259
 msgid "Оставить заявку"
 msgstr "Өтініш қалдыру"
 
@@ -532,7 +536,7 @@ msgstr "Элемент өлшемдері, см"
 msgid "Рассчитайте стоимость доставки на маркетплейс"
 msgstr "Базарға жеткізу құнын есептеңіз"
 
-#: inc/template-parts.php:258
+#: inc/template-parts.php:268
 msgid "Рассчитать стоимость"
 msgstr "Құнын есептеңіз"
 
